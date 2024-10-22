@@ -12,7 +12,21 @@ module.exports = {
       colors:{
           primary:"#FBC1D4",
           secondary:"#E2E2E2",
+          basic:"#E2E2E2",
           black:"#1E1E1E",
+      },
+      fontSize: {
+        '6vw': '8vw',
+      },
+      keyframes: {
+        textRotation: {
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
+      },
+      animation: {
+        textRotation: 'textRotation 8s linear infinite',
       },
     },
   },

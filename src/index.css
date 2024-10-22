@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "primaryFont";
   src: url("./fonts/Bounesva\ Personil\ Use\ Only.ttf") format("truetype");
@@ -33,33 +32,45 @@ body {
 a {
   color: unset;
   text-decoration: none;
-} 
+}
+
+/* * typography */
+@layer utilities {
+  .text-stroke {
+    color: transparent;
+    color: #e2e2e2;
+    /* color: #1E1E1E; */
+    /* -webkit-text-stroke: 1px #fff; */
+  }
+}
+
 /* * animation slide-right */
+/* Slide right animation */
 
-.slide-right {
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+/* .slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} */
+
+.slide-left {
+  -webkit-animation: swing-left-bck 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation: swing-left-bck 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-  }
+.slide-in-right {
+  animation: slide-right 0.4s ease both ;
 }
+.slide-in-left {
+  animation: slide-left 0.4s ease both forwards;
+}
+
 @keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+  from {
+    right: -100%;
   }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
+  to {
+    right: 0%;
   }
 }
+

@@ -6,19 +6,16 @@ import {About, Home, Projects} from './pages';
 
 
 const App = () => {
-  // const {articlesData} = HandleFetchArticles()
 
   return (
     <>
-    
       <div className="App">
-      
+
       <Routes>
       <Route path='/' element={<Home />}  />
       <Route path='/about' element={<About />}  />
       <Route path='/projects' element={<Projects />}  />
 
-       
       </Routes>
       </div>
     </>
