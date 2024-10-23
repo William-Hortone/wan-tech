@@ -11,7 +11,7 @@ const Header = () => {
         {/* Logo */}
         <div className="w-full h-auto flex flex-col items-center py-2 ">
           <h2 className="font-fontBase text-5xl">WAN TECH</h2>
-          <p className="text-xl font-cormorant font-medium capitalize ">
+          <p className="font-opensans font-medium  capitalize ">
             Agence de solutions digitales
           </p>
         </div>
@@ -42,7 +42,7 @@ const Header = () => {
             className="hidden group-hover:block transition-all duration-300 ease-in-out"
           />
 
-          <p>Menu</p>
+          <p className="font-extrabold">Menu</p>
         </button>
 
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />

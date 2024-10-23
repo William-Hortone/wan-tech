@@ -28,8 +28,8 @@ const NavBar = ({ showMenu, setShowMenu }) => {
       <nav
         className={
           !showMenu
-            ? "h-screen w-1/4 flex flex-col -right-full absolute top-0 p-4 bg-orange-500"
-            : "slide-in-right h-screen w-1/4 flex flex-col absolute top-0 p-4 bg-basic"
+            ? "h-screen w-1/4 flex flex-col -right-full absolute top-0 p-4 "
+            : "slide-in-right h-screen w-1/4 flex flex-col fixed top-0 p-4 bg-basic z-10"
         }
       >
         {/* Title logo */}
@@ -50,23 +50,43 @@ const NavBar = ({ showMenu, setShowMenu }) => {
           onClick={() => setShowMenu(false)}
           className="absolute top-8 right-9 flex items-center gap-2 font-medium z-10 group"
         >
-          <GoEyeClosed className="block group-hover:hidden" color="black" size={20} />
-          <RxEyeClosed className="hidden group-hover:block" color="black" size={20} />
-          <p>Fermer</p>
+          <GoEyeClosed
+            className="block group-hover:hidden"
+            color="black"
+            size={20}
+          />
+          <RxEyeClosed
+            className="hidden group-hover:block"
+            color="black"
+            size={20}
+          />
+          <p className="font-extrabold">Fermer</p>
         </button>
 
         <ul className=" h-screen flex flex-col justify-center gap-12 p- relative  ">
-          <Link to="" className="font-fontAlt text-3xl">
+          <Link
+            to=""
+            className="font-fontAlt text-3xl text-zinc-400 hover:text-black hover:font-bold"
+          >
             Accueil
           </Link>
-          <Link to="" className="font-fontAlt text-3xl">
+          <Link
+            to=""
+            className="font-fontAlt text-3xl text-zinc-400 hover:text-black"
+          >
             A Propos
           </Link>
-          <Link to="" className="font-fontAlt text-3xl">
+          <Link
+            to=""
+            className="font-fontAlt text-3xl text-zinc-400 hover:text-black"
+          >
             Projets
           </Link>
         </ul>
       </nav>
+      {showMenu && (
+        <div class="w-full h-screen fixed top-0 left-0 bg-[rgba(255,255,255,0)] transition-all ease duration-400 backdrop-blur-md z-2"></div>
+      )}
     </>
   );
 };
