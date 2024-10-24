@@ -19,7 +19,7 @@ const TitleLogo = () => {
     //  Animation to change color on scroll
     const animation = gsap.fromTo(
       ".letter",
-      { color: "#E2E2E2" },
+      { color: "#ffff" },
       {
         color: "#1E1E1E",
         scrollTrigger: {
@@ -41,8 +41,8 @@ const TitleLogo = () => {
 
   return (
     <>
-      <h1 ref={logoRef} className="text-stroke text-6vw">
-        WAN TECH
+      <h1 ref={logoRef} className="text-stroke text-6vw flex  justify-between">
+      <span> WAN </span>  <span> TECH </span>
       </h1>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavBar, TitleLogo, CircleAnimation } from "./../../components";
+import { NavBar, TitleLogo, CircleAnimation,Avatar } from "./../../components";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
 
@@ -10,15 +10,23 @@ const Header = () => {
       <header className="w-screen h-screen relative bg-primary p-2">
         {/* Logo */}
         <div className="w-full h-auto flex flex-col items-center py-2 ">
-          <h2 className="font-fontBase text-5xl">WAN TECH</h2>
+          <h2 className="font-fontBase text-5xl"> 
+          WAN TECH
+         
+       </h2>
           <p className="font-opensans font-medium  capitalize ">
             Agence de solutions digitales
           </p>
         </div>
 
         {/* TitleLogo */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fontBase ">
+        <div className="absolute top-1/2 left-1/2 w-3/4 transform  -translate-y-1/2 -translate-x-1/2  font-fontBase bg-gdreen-600">
+          <div className="absolute top-1/2 left-1/2 w-3/4 transform  -translate-x-1/2 -translate-y-1/2   w-full h-auto">
+
           <TitleLogo />
+
+        </div>
+          <Avatar />
         </div>
 
         {/* Circle text animation */}
@@ -33,8 +41,6 @@ const Header = () => {
             color="black"
             className="block group-hover:hidden transition-all duration-300 ease-in-out"
           />
-          
-          
           <GiSurroundedEye
             size={20}
             color="black"

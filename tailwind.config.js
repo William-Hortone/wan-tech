@@ -10,10 +10,11 @@ module.exports = {
         opensans: ['"Open Sans"', 'sans-serif'],
       },
       colors:{
-          primary:"#FBC1D4",
+          primary:"#E2E2E2",
           secondary:"#E2E2E2",
-          basic:"#ffff",
           // basic:"#E2E2E2",
+          white:"#ffff",
+          basic:"#0F1112",
           black:"#1E1E1E",
       },
       fontSize: {
