@@ -33,7 +33,7 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         }
       >
         {/* Title logo */}
-        <h2 className="absolute right-8 top-1/4 flex flex-col items-center text-4xl font-fontBase">
+        <h2 className="absolute right-8 top-1/4 flex flex-col items-center text-4xl font-fontBase text-white">
           {["W", "A", "N", "- ", "T", "E", "C", "H"].map((char, index) => (
             <span
               key={index}
@@ -52,37 +52,39 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         >
           <GoEyeClosed
             className="block group-hover:hidden"
-            color="black"
+            color="white"
             size={20}
           />
           <RxEyeClosed
             className="hidden group-hover:block"
-            color="black"
+            color="white"
             size={20}
           />
-          <p className="font-extrabold">Fermer</p>
+          <p className="font-extrabold text-white">Fermer</p>
         </button>
 
         <ul className=" h-screen flex flex-col justify-center gap-12 p- relative  ">
           <Link
             to=""
-            className="font-fontAlt text-3xl text-zinc-400 hover:text-black hover:font-bold"
+            className="font-fontAlt  uppercase text-3xl text-zinc-400  hover:text-white hover:font-bold transition  ease-in-out duration-300 "
           >
             Accueil
           </Link>
           <Link
             to=""
-            className="font-fontAlt text-3xl text-zinc-400 hover:text-black"
+            className="font-fontAlt  uppercase text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
           >
             A Propos
           </Link>
           <Link
             to=""
-            className="font-fontAlt text-3xl text-zinc-400 hover:text-black"
+            className="font-fontAlt  uppercase text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
           >
             Projets
           </Link>
         </ul>
+
+        <p className="font-fontAlt text-lg text-white">wantech@gmail.com</p>
       </nav>
       {showMenu && (
         <div class="w-full h-screen fixed top-0 left-0 bg-[rgba(255,255,255,0)] transition-all ease duration-400 backdrop-blur-md z-2"></div>
