@@ -28,14 +28,13 @@ const Header = () => {
 
         {/* Toggle btn */}
         <button onClick={() =>setShowMenu(true)} className="absolute top-8 right-9 flex items-center gap-2 cursor-pointer group">
-          {/* First icon (hidden on hover of button) */}
           <FaRegEye
             size={20}
             color="black"
             className="block group-hover:hidden transition-all duration-300 ease-in-out"
           />
           
-          {/* Second icon (visible on hover of button) */}
+          
           <GiSurroundedEye
             size={20}
             color="black"
