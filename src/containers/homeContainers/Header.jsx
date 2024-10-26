@@ -9,16 +9,16 @@ const Header = () => {
     <>
       <header className="w-screen h-screen relative bg-primary p-2">
         {/* Logo */}
-        <div className="w-full h-16 bg-greesn-600 flex  justify-between items-center px-16 ">
+        <div className="w-full h-16 flex  justify-between items-center px-16 ">
           <h2 className="font-fontBase text-xl">WAN TECH</h2>
-          <p className="font-fontAlt font-semibold text-lg  capitalize ">
+          <p className=" hidden lg:block  font-fontAlt font-semibold text-lg  capitalize ">
             Agence de solutions digitales
           </p>
 
           {/* Toggle btn */}
           <button
             onClick={() => setShowMenu(true)}
-            className=" top-8 right-9 flex items-center gap-2 cursor-pointer group"
+            className="top-8 right-9 flex items-center gap-2 cursor-pointer group"
           >
             <FaRegEye
               size={20}

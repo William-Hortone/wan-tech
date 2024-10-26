@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { ServiceItem, Title } from "../../components";
 
 const ProjectView = () => {
   return (
-    <div>ProjectView</div>
-  )
-}
+    <>
+      <section className="w-full h-screen bg-orange-600 p-8">
+        <Title title="Sevices" />
 
-export default ProjectView
+        <ServiceItem />
+      </section>
+    </>
+  );
+};
+
+export default ProjectView;

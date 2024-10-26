@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ServiceItem = () => {
   return (
-    <div>ServiceItem</div>
-  )
-}
+    <>
+      <div className="w-full h-24 bg-orange-700">ServiceItem</div>
+    </>
+  );
+};
 
-export default ServiceItem
+export default ServiceItem;
