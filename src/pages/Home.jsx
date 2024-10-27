@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header,Description, ProjectView} from '../containers';
+import { Header,Description,ServicesView,  ProjectView} from '../containers';
 
 
 
@@ -8,6 +8,7 @@ const Home = () => {
    <>
     <Header />
     <Description />
+    <ServicesView />
     <ProjectView />
     <div className='h-screen w-full'></div>
    </>

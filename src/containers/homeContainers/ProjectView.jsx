@@ -1,66 +1,48 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ServiceItem, Title } from "../../components";
+import { Title } from "../../components";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
   useEffect(() => {
-    const serviceItems = gsap.utils.toArray(".service-item");
-    
-    //  Animation of each service item
-    serviceItems.forEach((item, index) => {
-      gsap.fromTo(
-        item,
-        { y: 100, opacity: 0 },
-        {
-          y: -80 * index,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            end: "top 35%",
-            scrub: true,
-          },
-        }
-      );
-    });
+    gsap.fromTo(
+      ".expanding-div",
+      { width: "13%", height: "6rem", left: "8%", bottom: "8%" }, // Initial state (bottom left)
+      {
+        width: "100%", // End state width
+        height: "80vh", // Adjust height based on content
+        left: "50%", // Center horizontally
+        bottom: "50%", // Center vertically
+        translateX: "-50%", // Adjust position to truly center
+        translateY: "50%", // Move it up to align vertically
+        scrollTrigger: {
+          trigger: ".expanding-div",
+          start: "top 80%", // When the top of the div hits 80% of the viewport
+          end: "top 30%", // When the top of the div hits 30% of the viewport
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
     <>
-      <section className="w-full h-auto bg-primary pb-8">
-        <div className="p-8">
-          <Title title="Services" />
-        </div>
+      <section className="w-full h-[200vh] relative bg-black pb-8">
+        <section className="w-full h-[100vh] relative bg-black">
+          <div className="p-8">
+            <Title title="Projets" color="white" />
+          </div>
 
-        <div className="w-full h-auto flex flex-col">
-          <ServiceItem
-            title="SITES WEB"
-            text="Nous concevons des sites web sur mesure qui reflètent l'identité de votre marque et répondent à vos objectifs commerciaux. Que vous ayez besoin d'un site vitrine, d'une plateforme e-commerce ou d'un blog,"
-            img=""
-            bgColor="#1E1E1E"
-            color="#ffffff"
-            className="service-item"
-          />
-          <ServiceItem
-            title="APPLICATIONS MOBILE"
-            text="Nous concevons des applications mobiles innovantes, parfaitement adaptées aux besoins uniques de votre entreprise et de vos utilisateurs. Nous créons des applications intuitives, performantes et visuellement attrayantes, qu'elles soient destinées à iOS, Android ou aux deux."
-            img=""
-            bgColor="#C3ABFF"
-            color="#ffffff"
-            className="service-item"
-          />
-          <ServiceItem
-            title="LOGO & AFFICHES"
-            text="Votre image de marque commence par un logo percutant et des affiches attrayantes. Nous travaillons en étroite collaboration avec vous pour comprendre vos valeurs et votre vision, afin de créer des éléments graphiques qui captivent votre audience."
-            img=""
-            bgColor="#D9D9D9"
-            color="#000000"
-            className="service-item"
-          />
-        </div>
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-white text-center font-fontAlt md:text-4xl">
+            Nous réalisons les projets de vos rêves, en transformant vos idées en
+            solutions concrètes et innovantes.
+          </h2>
+
+          {/* View projects */}
+          <div className="expanding-div w-[13%] h-24 bg-white absolute left-8 bottom-8"></div>
+        </section>
       </section>
     </>
   );
