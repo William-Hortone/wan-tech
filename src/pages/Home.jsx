@@ -10,7 +10,9 @@ const Home = () => {
     <Description />
     <ServicesView />
     <ProjectView />
-    <div className='h-screen w-full'></div>
+    <div className='h-screen w-full bg-black'>
+      <h2 className='text-4xl text-center text-white'>hello william </h2>
+    </div>
    </>
   )
 }

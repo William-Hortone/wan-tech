@@ -26,7 +26,7 @@ const Button = ({colorText, title}) => {
             size={20}
           />
         </div>
-        <div className="app__button-content bg-orange-500">
+        <div className="app__button-content bg-basic">
           <p style={{color: colorText}}>{title}</p>
           <p style={{color: colorText}}>{title} </p>
         </div>

@@ -1,0 +1,12 @@
+/* Make sure the wrapper takes up the full viewport height */
+#smooth-wrapper {
+    overflow: hidden;
+    height: auto;
+  }
+  
+  /* Content styling for smooth scroll */
+  #smooth-content {
+    overflow: hidden;
+    position: relative;
+  }
+  

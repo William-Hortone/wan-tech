@@ -29,11 +29,11 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         className={
           !showMenu
             ? "h-screen w-1/4 flex flex-col -right-full absolute top-0 p-4 "
-            : "slide-in-right h-screen w-1/4 flex flex-col fixed top-0 p-4 bg-basic z-10"
+            : "slide-in-right h-screen w-1/4 flex flex-col fixed top-0 p-4 bg-black z-10"
         }
       >
         {/* Title logo */}
-        <h2 className="absolute right-8 top-1/4 flex flex-col items-center text-4xl font-fontBase text-white">
+        <h2 className="absolute right-8 top-1/4 flex flex-col items-center text-4xl font-fontBase text-basic">
           {["W", "A", "N", "- ", "T", "E", "C", "H"].map((char, index) => (
             <span
               key={index}

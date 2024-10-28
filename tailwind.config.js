@@ -13,9 +13,10 @@ module.exports = {
           primary:"#E2E2E2",
           black:"#1E1E1E",
           secondary:"#E2E2E2",
-          // basic:"#E2E2E2",
+          // basic:"#FF6F61",
           white:"#ffff",
-          basic:"#0F1112",
+          basic:"#FF6F61",
+          origin:"#0F1112",
       },
       fontSize: {
         '6vw': '8vw',
