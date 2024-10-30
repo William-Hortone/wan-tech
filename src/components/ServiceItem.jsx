@@ -15,3 +15,4 @@ const ServiceItem = ({ title, text, img, bgColor, color, className }) => {
 };
 
 export default ServiceItem;
+

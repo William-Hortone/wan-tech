@@ -1,12 +1,15 @@
-/* Make sure the wrapper takes up the full viewport height */
-#smooth-wrapper {
-    overflow: hidden;
-    height: auto;
-  }
   
-  /* Content styling for smooth scroll */
-  #smooth-content {
-    overflow: hidden;
-    position: relative;
+  /* Text animation on scroll */
+  .app__desc-content{
+    color: black;
   }
-  
+  .content-text{
+    overflow: hidden;
+    line-height: 2;
+    
+  }
+  .content-text span{
+    display: inline-block;
+    transform: translateY(100%);
+
+  }

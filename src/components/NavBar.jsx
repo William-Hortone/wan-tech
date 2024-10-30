@@ -28,8 +28,8 @@ const NavBar = ({ showMenu, setShowMenu }) => {
       <nav
         className={
           !showMenu
-            ? "h-screen w-1/4 flex flex-col -right-full absolute top-0 p-4 "
-            : "slide-in-right h-screen w-1/4 flex flex-col fixed top-0 p-4 bg-black z-10"
+            ? "h-screen w-1/4 flex flex-col -right-full absolute top-0  "
+            : "slide-in-right h-screen w-full md:w-1/4 flex flex-col fixed top-0 p-4 bg-black z-10"
         }
       >
         {/* Title logo */}
@@ -66,29 +66,29 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         <ul className=" h-screen flex flex-col justify-center gap-12 p- relative  ">
           <Link
             to=""
-            className="font-fontAlt  uppercase text-3xl text-zinc-400  hover:text-white hover:font-bold transition  ease-in-out duration-300 "
+            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400  hover:text-white hover:font-bold transition  ease-in-out duration-300 "
           >
             Accueil
           </Link>
           <Link
             to=""
-            className="font-fontAlt  uppercase text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
+            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
           >
             A Propos
           </Link>
           <Link
             to=""
-            className="font-fontAlt  uppercase text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
+            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
           >
             Projets
           </Link>
         </ul>
 
-        <p className="font-fontAlt text-lg text-white">wantech@gmail.com</p>
+        <p className="font-fontAlt  text-lg text-white">wantech@gmail.com</p>
       </nav>
-      {showMenu && (
+      {/* {showMenu && (
         <div class="w-full h-screen fixed top-0 left-0 bg-[rgba(255,255,255,0)] transition-all ease duration-400 backdrop-blur-md z-2"></div>
-      )}
+      )} */}
     </>
   );
 };
