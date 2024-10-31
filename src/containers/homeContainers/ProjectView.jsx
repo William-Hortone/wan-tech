@@ -23,13 +23,13 @@ const ProjectView = () => {
         scrollTrigger: {
           trigger: ".app__desc-content",
           start: "top 80%",
-          end: "top 30%", // Change this for better animation timing
+          end: "top 30%",
           toggleActions: "play none none play",
         },
       }
     );
 
-    // Create a timeline for the expanding div animation
+    // Timeline for the expanding div animation
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: expandingDiv,

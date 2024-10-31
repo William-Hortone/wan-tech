@@ -9,7 +9,7 @@ const Description = () => {
   useEffect(() => {
     const textSpans = document.querySelectorAll(".content-text span");
 
-    //  GSAP timeline for staggered animations
+    //  timeline for staggered animations
     gsap.fromTo(
       textSpans,
       { y: "100%" },
