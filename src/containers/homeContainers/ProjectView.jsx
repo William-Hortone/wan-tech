@@ -1,12 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Title } from "../../components";
 import images from "../../constants/images";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
+  const [showMore, setShowMore] = useState(false);
+  const navigate = useNavigate();
+  const buttonRef = useRef(null);
+  const textRef = useRef(null);
+
   useEffect(() => {
     const expandingDiv = document.querySelector(".expanding-div");
     const bigSection = document.querySelector(".big-section");
@@ -29,7 +35,7 @@ const ProjectView = () => {
       }
     );
 
-    // Timeline for the expanding div animation
+    // Timeline to set the position of the container
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: expandingDiv,
@@ -52,6 +58,7 @@ const ProjectView = () => {
       },
     });
 
+    // Animation for the expanding div
     tl.to(expandingDiv, {
       width: "90%",
       height: "80vh",
@@ -69,9 +76,33 @@ const ProjectView = () => {
     };
   }, []);
 
+  // The function to go to the projects page
+  const handleSeeMore = () => {
+    // the scaling animation
+    gsap.to(buttonRef.current, {
+      scale: 14,
+      duration: 2,
+      ease: "ease-in-out",
+      onStart: () => {
+        //  opacity animation for the text
+        gsap.to(textRef.current, {
+          opacity: 0,
+          duration: 2.5,
+          ease: "ease",
+        });
+      },
+      onComplete: () => {
+        setShowMore(true);
+        setTimeout(() => {
+          navigate("/projects");
+        }, 400);
+      },
+    });
+  };
+
   return (
     <section className="w-full h-[200vh] relative bg-black pb-8">
-      <section className="big-section w-full h-[100vh] relative bg-black">
+      <section className="big-section w-full h-[100vh] relative bg-black z-10">
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
@@ -83,28 +114,43 @@ const ProjectView = () => {
       </section>
 
       {/* See more project */}
-      {/* <section className="w-full h-screen app__desc-content flex flex-col items-center  justify-center gap-36  bg-primary">
+      <section className="w-full h-screen app__desc-content flex flex-col items-center justify-center gap-36 bg-primary">
         <div className="">
-          <h3 className="content-text font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+          <h3 className="content-text font-fontBase uppercase 2xl:text-5xl md:text-xl text-center bg-primary leading-10">
             <span>Parcourez notre portfolio et découvrez</span>
           </h3>
-          <h3 className="content-text font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+          <h3 className="content-text font-fontBase uppercase 2xl:text-5xl md:text-xl text-center bg-primary leading-10">
             <span>nos réalisations.</span>
           </h3>
         </div>
 
-        See more
-        <div class="relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md">
+        {/* See more button */}
+        <div
+          ref={buttonRef}
+          onClick={handleSeeMore}
+          className={
+            showMore
+              ? "relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore show-more"
+              : "relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore"
+          }
+        >
           <img
             src={images.seeMore}
             alt="See More"
-            class="object-cover w-full h-full rounded-md"
+            className="object-cover w-full h-full rounded-md"
           />
-          <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-mdc font-opensans uppercase">
+          <p
+            ref={textRef}
+            className={
+              showMore
+                ? "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-mdc font-fontAlt uppercase remove-text"
+                : "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-mdc font-fontAlt uppercase"
+            }
+          >
             Voir Plus
           </p>
         </div>
-      </section> */}
+      </section>
     </section>
   );
 };
