@@ -2206,6 +2206,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@studio-freight/lenis@^1.0.42":
+  "integrity" "sha512-HJAGf2DeM+BTvKzHv752z6Z7zy6bA643nZM7W88Ft9tnw2GsJSp6iJ+3cekjyMIWH+cloL2U9X82dKXgdU8kPg=="
+  "resolved" "https://registry.npmjs.org/@studio-freight/lenis/-/lenis-1.0.42.tgz"
+  "version" "1.0.42"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   "integrity" "sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ=="
   "resolved" "https://registry.npmjs.org/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz"
@@ -7147,6 +7152,11 @@
     "picocolors" "^1.0.0"
     "shell-quote" "^1.8.1"
 
+"lenis@^1.1.16":
+  "integrity" "sha512-bGS8IxJW3x310gTwFylgYU6bGzeVnTALmgyLP8RZ9DFSYC/hN3fi+urCWspr5otljbDAGF4ND2GKCFtemAd45Q=="
+  "resolved" "https://registry.npmjs.org/lenis/-/lenis-1.1.16.tgz"
+  "version" "1.1.16"
+
 "leven@^3.1.0":
   "integrity" "sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A=="
   "resolved" "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
@@ -8735,7 +8745,7 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
 
-"react-icons@^4.8.0":
+"react-icons@^4.12.0":
   "integrity" "sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.12.0.tgz"
   "version" "4.12.0"
