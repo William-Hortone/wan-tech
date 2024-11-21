@@ -27,10 +27,23 @@ module.exports = {
             transform: 'rotate(360deg)',
           },
         },
+        move: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         textRotation: 'textRotation 8s linear infinite',
+        'sliding-move': 'move 65s linear infinite',
       },
+
+ 
+      // keyframes: {
+      //   move: {
+      //     '0%': { transform: 'translateX(0)' },
+      //     '100%': { transform: 'translateX(-100%)' },
+      //   },
+      // },
     },
   },
   plugins: [],

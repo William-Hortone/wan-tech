@@ -82,6 +82,7 @@ const ProjectView = () => {
     gsap.to(buttonRef.current, {
       scale: 14,
       duration: 2,
+
       ease: "ease-in-out",
       onStart: () => {
         //  opacity animation for the text
@@ -101,7 +102,7 @@ const ProjectView = () => {
   };
 
   return (
-    <section className="w-full h-[200vh] relative bg-black pb-8">
+    <section className="w-full h-[200vh] relative bg-black pb-8 z-20">
       <section className="big-section w-full h-[100vh] relative bg-black z-10">
         <div className="p-8">
           <Title title="Projets" color="white" />

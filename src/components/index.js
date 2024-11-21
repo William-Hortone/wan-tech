@@ -6,7 +6,9 @@ import Button from "./button/Button";
 import ServiceItem from "./ServiceItem";
 import Footer from "./Footer";
 import Title from "./Title";
-import Avatar from "./animations/Avatar"
+import Avatar from "./animations/Avatar";
+import Infos from "./Infos";
+
 export {
   ViewServices,
   Button,
@@ -16,5 +18,6 @@ export {
   TitleLogo,
   Title,
   CircleAnimation,
-  Avatar
+  Avatar,
+  Infos,
 };
