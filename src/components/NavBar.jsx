@@ -33,7 +33,7 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         }
       >
         {/* Title logo */}
-        <h2 className="absolute right-8 top-1/4 flex flex-col items-center text-4xl font-fontBase text-basic">
+        <h2 className="absolute flex flex-col items-center text-4xl right-8 top-1/4 font-fontBase text-basic">
           {["W", "A", "N", "- ", "T", "E", "C", "H"].map((char, index) => (
             <span
               key={index}
@@ -48,7 +48,7 @@ const NavBar = ({ showMenu, setShowMenu }) => {
         {/* Close btn */}
         <button
           onClick={() => setShowMenu(false)}
-          className="absolute top-8 right-9 flex items-center gap-2 font-medium z-10 group"
+          className="absolute z-10 flex items-center gap-2 font-medium top-8 right-9 group"
         >
           <GoEyeClosed
             className="block group-hover:hidden"
@@ -63,28 +63,28 @@ const NavBar = ({ showMenu, setShowMenu }) => {
           <p className="font-extrabold text-white">Fermer</p>
         </button>
 
-        <ul className=" h-screen flex flex-col justify-center gap-12 p- relative  ">
+        <ul className="relative flex flex-col justify-center h-screen gap-12 p-">
           <Link
             to=""
-            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400  hover:text-white hover:font-bold transition  ease-in-out duration-300 "
+            className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold "
           >
             Accueil
           </Link>
           <Link
             to=""
-            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
+            className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold"
           >
             A Propos
           </Link>
           <Link
             to=""
-            className="font-fontAlt   uppercase text-2xl md:text-3xl text-zinc-400 hover:text-white hover:font-bold transition  ease-in-out duration-300"
+            className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold"
           >
             Projets
           </Link>
         </ul>
 
-        <p className="font-fontAlt  text-lg text-white">wantech@gmail.com</p>
+        <p className="text-lg text-white font-fontAlt">wantech@gmail.com</p>
       </nav>
       {/* {showMenu && (
         <div class="w-full h-screen fixed top-0 left-0 bg-[rgba(255,255,255,0)] transition-all ease duration-400 backdrop-blur-md z-2"></div>

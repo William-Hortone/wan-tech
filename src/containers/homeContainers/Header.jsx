@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import {
-  NavBar,
-  TitleLogo,
-  CircleAnimation,
-  Avatar,
-  Infos,
-} from "./../../components";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import {
+  Avatar,
+  Infos,
+  NavBar,
+  TitleLogo
+} from "./../../components";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
