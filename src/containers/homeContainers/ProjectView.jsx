@@ -109,11 +109,11 @@ const ProjectView = () => {
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
-        <h2 className="absolute text-center text-white uppercase transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-fontAlt md:text-4xl">
+        <h2 className="absolute text-2xl text-center text-white uppercase transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-fontAlt md:text-4xl">
           Nous réalisons les projets de vos rêves, en transformant vos idées en
           solutions concrètes et innovantes.
         </h2>
-        <div className="expanding-div w-[13%] h-24 bg-white absolute left-8 bottom-8">
+        <div className="expanding-div w-[25%] md:w-[13%] h-24 bg-white absolute left-8 bottom-8">
           <video
             className="object-cover w-full h-full" 
             autoPlay
@@ -130,10 +130,10 @@ const ProjectView = () => {
       {/* See more project */}
       <section className="flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary">
         <div className="">
-          <h3 className="leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-xl bg-primary">
+          <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
             <span>Parcourez notre portfolio et découvrez</span>
           </h3>
-          <h3 className="leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-xl bg-primary">
+          <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
             <span>nos réalisations.</span>
           </h3>
         </div>
@@ -145,7 +145,7 @@ const ProjectView = () => {
           className={
             showMore
               ? "relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore show-more"
-              : "relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore"
+              : "relative w-[30%] md:w-[20%]  lg:w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore"
           }
         >
           <img
@@ -157,8 +157,8 @@ const ProjectView = () => {
             ref={textRef}
             className={
               showMore
-                ? "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-mdc font-fontAlt uppercase remove-text"
-                : "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-mdc font-fontAlt uppercase"
+                ? "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-fontAlt  font-bold uppercase remove-text"
+                : "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[10px] md:text-lg font-bold font-fontAlt uppercase"
             }
           >
             Voir Plus

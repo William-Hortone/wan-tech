@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
-import {
-  Avatar,
-  Infos,
-  NavBar,
-  TitleLogo
-} from "./../../components";
+import { Avatar, Infos, NavBar, TitleLogo } from "./../../components";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,19 +11,20 @@ const Header = () => {
         <Infos />
         {/* Logo */}
         <div className="flex items-center justify-between w-full h-16 px-0 lg:px-16 ">
-      
-          <button 
-
+          <button
             className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
-            style={{width: '200px'}}
+ 
           >
-       
-
-            <div className="flex items-center justify-start app__button-content bg-basic"
-              style={{width: '200px'}}>
-        
-              <p className="whitespace-nowrap " style={{ color: "white" }}>WAN TECH</p>
-              <p className="whitespace-nowrap " style={{ color: "white" }}>WAN TECH </p>
+            <div
+              className="flex items-center w-[130px] md:w-[200px]  justify-start app__button-content bg-basic"
+         
+            >
+              <p className="whitespace-nowrap " style={{ color: "white" }}>
+                WAN TECH
+              </p>
+              <p className="whitespace-nowrap " style={{ color: "white" }}>
+                WAN TECH{" "}
+              </p>
             </div>
           </button>
           {/* <p className="hidden text-lg font-semibold capitalize lg:block font-fontAlt">
@@ -54,14 +50,12 @@ const Header = () => {
             <p className="font-extrabold">Menu</p>
           </button> */}
 
-          <button 
+          <button
             onClick={() => setShowMenu(true)}
             className="flex items-center gap-2 p-4 rounded-sm cursor-pointer app__button group"
-            style={{width: '200px'}}
+            style={{ }}
           >
-       
-
-            <div className="flex items-center justify-start app__button-content bg-basic">
+            <div className="flex w-[130px] md:w-[200px] items-center  app__button-content bg-basic">
               <FaRegEye
                 size={20}
                 color="black"
@@ -72,8 +66,10 @@ const Header = () => {
                 color="black"
                 className="hidden transition-all duration-300 ease-in-out group-hover:block"
               />
-              <p style={{ color: "white" }}>Menu</p>
-              <p style={{ color: "white" }}>Menu </p>
+              <div className="w-auto h-[100%] bg-green-500 justify-self-end self-end">
+                <p style={{ color: "white" }}>Menu</p>
+                <p style={{ color: "white" }}>Menu </p>
+              </div>
             </div>
           </button>
         </div>

@@ -31,24 +31,24 @@ const Description = () => {
   return (
     <section className="w-full h-screen flex flex-col justify-center items-center gap-32 md:px-[20%] bg-primary">
       <div className="app__desc-content">
-        <h3 className="content-text  font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+        <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>Il n'y a qu'un pas à franchir entre votre idée et</span>
         </h3>
-        <h3 className="content-text  font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+        <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>sa réalisation : contactez-nous.</span>
         </h3>
-        <h3 className="content-text  font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+        <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>Nous donnons vie à vos projets grâce à des </span>
         </h3>
-        <h3 className="content-text  font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+        <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>solutions digitales sur mesure : applications</span>
         </h3>
-        <h3 className="content-text  font-fontAlt uppercase 2xl:text-3xl md:text-xl text-center bg-primary leading-10">
+        <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>mobiles, sites web, logos et affiches</span>
         </h3>
       </div>
 
-      <Button colorText="#FFFFFF" title="Voir Plus" />
+      <Button colorText="#FFFFFF" width='250px' title="Voir Plus" />
     </section>
   );
 };
