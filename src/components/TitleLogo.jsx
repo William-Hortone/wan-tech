@@ -21,7 +21,7 @@ const TitleLogo = () => {
       ".letter",
       { color: "#ffff" },
       {
-        color: "#1E1E1E",
+        color: "#FF6F61",
         scrollTrigger: {
           trigger: logo,
           start: "top 30%",
@@ -41,7 +41,7 @@ const TitleLogo = () => {
 
   return (
     <>
-      <h1 ref={logoRef} className="text-stroke text-6vw flex  justify-between">
+      <h1 ref={logoRef} className="flex justify-between text-stroke text-6vw">
       <span> WAN </span>  <span> TECH </span>
       </h1>
     </>

@@ -41,3 +41,15 @@
     scale: 12;
     transition: 1s ease-in-out;
   } */
+  .initial-bg {
+    background-color: "#0000000";
+    transition: background 0.3s ease;
+  }
+  
+  .new-bg {
+    background-color: "#FF6F61";
+    transition: background 0.3s ease;
+  }
+  
+
+  

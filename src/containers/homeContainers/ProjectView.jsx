@@ -5,6 +5,8 @@ import { Title } from "../../components";
 import images from "../../constants/images";
 import { useNavigate } from "react-router-dom";
 
+import video1 from "../../assets/video1.mp4"; 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
@@ -107,20 +109,31 @@ const ProjectView = () => {
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
-        <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-white text-center font-fontAlt md:text-4xl">
+        <h2 className="absolute text-center text-white uppercase transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-fontAlt md:text-4xl">
           Nous réalisons les projets de vos rêves, en transformant vos idées en
           solutions concrètes et innovantes.
         </h2>
-        <div className="expanding-div w-[13%] h-24 bg-white absolute left-8 bottom-8"></div>
+        <div className="expanding-div w-[13%] h-24 bg-white absolute left-8 bottom-8">
+          <video
+            className="object-cover w-full h-full" 
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={video1} type="video/mp4" />
+            Your browser does not support the video
+          </video>
+        </div>
       </section>
 
       {/* See more project */}
-      <section className="w-full h-screen app__desc-content flex flex-col items-center justify-center gap-36 bg-primary">
+      <section className="flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary">
         <div className="">
-          <h3 className="content-text font-fontBase uppercase 2xl:text-5xl md:text-xl text-center bg-primary leading-10">
+          <h3 className="leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-xl bg-primary">
             <span>Parcourez notre portfolio et découvrez</span>
           </h3>
-          <h3 className="content-text font-fontBase uppercase 2xl:text-5xl md:text-xl text-center bg-primary leading-10">
+          <h3 className="leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-xl bg-primary">
             <span>nos réalisations.</span>
           </h3>
         </div>

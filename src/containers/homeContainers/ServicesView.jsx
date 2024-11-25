@@ -3,12 +3,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ServiceItem, Title } from "../../components";
 
+import video from "../../assets/video1.mp4";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesView = () => {
   useEffect(() => {
     const serviceItems = gsap.utils.toArray(".service-item");
-    
+
     //  Animation of each service item
     serviceItems.forEach((item, index) => {
       gsap.fromTo(
@@ -30,12 +32,12 @@ const ServicesView = () => {
 
   return (
     <>
-      <section className="w-full h-auto bg-primary pb-8">
+      <section className="w-full h-auto pb-8 bg-primary">
         <div className="p-8">
           <Title title="Services" />
         </div>
 
-        <div className="w-full h-auto flex flex-col">
+        <div className="flex flex-col w-full h-auto">
           <ServiceItem
             title="SITES WEB"
             text="Nous concevons des sites web sur mesure qui reflètent l'identité de votre marque et répondent à vos objectifs commerciaux. Que vous ayez besoin d'un site vitrine, d'une plateforme e-commerce ou d'un blog,"
@@ -43,6 +45,7 @@ const ServicesView = () => {
             bgColor="#1E1E1E"
             color="#ffffff"
             className="service-item"
+            video={video}
           />
           <ServiceItem
             title="APPLICATIONS MOBILE"
@@ -51,6 +54,7 @@ const ServicesView = () => {
             bgColor="#C3ABFF"
             color="#000000"
             className="service-item"
+            video={video}
           />
           <ServiceItem
             title="LOGO & AFFICHES"
@@ -59,6 +63,7 @@ const ServicesView = () => {
             bgColor="#FF6F61"
             color="#000000"
             className="service-item"
+            video={video}
           />
         </div>
       </section>

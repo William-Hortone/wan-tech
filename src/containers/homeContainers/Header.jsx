@@ -14,12 +14,26 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-      <header className="w-screen h-screen relative bg-primary p-">
+      <header className="relative z-10 w-screen h-screen bg-primary ">
         <Infos />
         {/* Logo */}
-        <div className="w-full h-16 flex  justify-between items-center px-0 lg:px-16 ">
-          <h2 className="font-fontBase text-md md:text-xl">WAN TECH</h2>
-          {/* <p className=" hidden lg:block  font-fontAlt font-semibold text-lg  capitalize ">
+        <div className="flex items-center justify-between w-full h-16 px-0 lg:px-16 ">
+      
+          <button 
+
+            className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
+            style={{width: '200px'}}
+          >
+       
+
+            <div className="flex items-center justify-start app__button-content bg-basic"
+              style={{width: '200px'}}>
+        
+              <p className="whitespace-nowrap " style={{ color: "white" }}>WAN TECH</p>
+              <p className="whitespace-nowrap " style={{ color: "white" }}>WAN TECH </p>
+            </div>
+          </button>
+          {/* <p className="hidden text-lg font-semibold capitalize lg:block font-fontAlt">
             Agence de solutions digitales
           </p> */}
 
@@ -31,12 +45,12 @@ const Header = () => {
             <FaRegEye
               size={20}
               color="black"
-              className="block group-hover:hidden transition-all duration-300 ease-in-out"
+              className="block transition-all duration-300 ease-in-out group-hover:hidden"
             />
             <GiSurroundedEye
               size={20}
               color="black"
-              className="hidden group-hover:block transition-all duration-300 ease-in-out"
+              className="hidden transition-all duration-300 ease-in-out group-hover:block"
             />
 
             <p className="font-extrabold">Menu</p>
@@ -44,20 +58,21 @@ const Header = () => {
 
           <button 
             onClick={() => setShowMenu(true)}
-            className="app__button  flex items-center gap-2 cursor-pointer p-4 rounded-sm group"
+            className="flex items-center gap-2 p-4 rounded-sm cursor-pointer app__button group"
+            style={{width: '200px'}}
           >
        
 
-            <div className="app__button-content flex items-center justify-start bg-basic">
+            <div className="flex items-center justify-start app__button-content bg-basic">
               <FaRegEye
                 size={20}
                 color="black"
-                className="block group-hover:hidden transition-all duration-300 ease-in-out"
+                className="block transition-all duration-300 ease-in-out group-hover:hidden"
               />
               <GiSurroundedEye
                 size={20}
                 color="black"
-                className="hidden group-hover:block transition-all duration-300 ease-in-out"
+                className="hidden transition-all duration-300 ease-in-out group-hover:block"
               />
               <p style={{ color: "white" }}>Menu</p>
               <p style={{ color: "white" }}>Menu </p>
@@ -66,17 +81,17 @@ const Header = () => {
         </div>
 
         {/* TitleLogo */}
-        <div className="w-3/4  absolute bottom-0  left-1/2 transform   -translate-x-1/2  font-fontBase bg-gsreen-600">
-          <div className="absolute top-1/2 left-1/2  transform  -translate-x-1/2 -translate-y-1/2   w-full h-auto">
+        <div className="absolute bottom-0 w-3/4 transform -translate-x-1/2 left-1/2 font-fontBase bg-gsreen-600">
+          <div className="absolute w-full h-auto transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             <TitleLogo />
           </div>
           <Avatar />
         </div>
 
         {/* Circle text animation */}
-        <div className="absolute left-4 bottom-3">
+        {/* <div className="absolute left-4 bottom-3">
           <CircleAnimation />
-        </div>
+        </div> */}
 
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
       </header>

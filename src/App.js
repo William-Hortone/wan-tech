@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { About, Home, Projects } from "./pages";
+import useLenis from "./hooks/useLenis";
 
+import Lenis from "lenis";
 const App = () => {
+
+
   return (
     <>
       <div className="App">
