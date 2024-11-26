@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
 import { About, Home, Projects } from "./pages";
-import useLenis from "./hooks/useLenis";
 
-import Lenis from "lenis";
 const App = () => {
 
-
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Home  setShowMenu={setShowMenu} showMenu={showMenu} />} />
+          <Route path="/about" element={<About setShowMenu={setShowMenu} showMenu={showMenu}  />} />
+          <Route path="/projects" element={<Projects setShowMenu={setShowMenu} showMenu={showMenu}  />} />
         </Routes>
       </div>
     </>

@@ -8,6 +8,8 @@ import Footer from "./Footer";
 import Title from "./Title";
 import Avatar from "./animations/Avatar";
 import Infos from "./Infos";
+import NavBtn from "./NavBtn";
+import PageTitle from "./PageTitle";
 
 export {
   ViewServices,
@@ -20,4 +22,6 @@ export {
   CircleAnimation,
   Avatar,
   Infos,
+  NavBtn,
+  PageTitle
 };

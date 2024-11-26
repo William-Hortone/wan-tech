@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Introduction } from "../containers";
 
-const About = () => {
+const About = ({ setShowMenu, showMenu }) => {
   return (
-    <div>About</div>
-  )
-}
+    <section className="bg-white h-[600vh]">
+      <Introduction setShowMenu={setShowMenu} showMenu={showMenu} />
+    </section>
+  );
+};
 
-export default About
+export default About;

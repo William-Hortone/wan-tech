@@ -65,19 +65,22 @@ const NavBar = ({ showMenu, setShowMenu }) => {
 
         <ul className="relative flex flex-col justify-center h-screen gap-12 p-">
           <Link
-            to=""
+            to="/"
+            onClick={() => setShowMenu(false)}
             className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold "
           >
             Accueil
           </Link>
           <Link
-            to=""
+            to="/about"
+            onClick={() => setShowMenu(false)}
             className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold"
           >
             A Propos
           </Link>
           <Link
-            to=""
+            to="/projects"
+            onClick={() => setShowMenu(false)}
             className="text-2xl uppercase transition duration-300 ease-in-out font-fontAlt md:text-3xl text-zinc-400 hover:text-white hover:font-bold"
           >
             Projets
