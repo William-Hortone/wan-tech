@@ -52,9 +52,9 @@ const Footer = () => {
   return (
     <>
       {/* Main Footer Wrapper */}
-      <section className="footer-wrapper relative -z-10 bg-basic h-[200vh]">
+      <section className="footer-wrapper relative -z-10 bg-black h-[200vh]">
         {/* Fixed Footer */}
-        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden text-white -z-10 bg-basic">
+        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic -z-10">
           <div className="relative flex flex-col justify-between h-full px-4 py-8 translate-y-full opacity-0 md:p-16 footer-content">
             <h3 className="w-3/4 md:w-1/2 footer-element font-fontAlt 2xl:text-2xl">
               Il n'y a qu'un pas à franchir entre votre idée et sa réalisation.
@@ -79,7 +79,7 @@ const Footer = () => {
 
               <div>
                 <SiKingstontechnology
-                  className="text-white footer-icon size-[100px] md:size-60 lg:size-80"
+                  className="text-basic footer-icon size-[100px] md:size-60 lg:size-80"
                   // style={{ fontSize: "75px" }} // Default size for small screens
                   // size={undefined} // Disable the fixed `size` prop
                 />
