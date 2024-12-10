@@ -151,7 +151,7 @@ const ProjectView = () => {
           <img
             src={images.seeMore}
             alt="See More"
-            className="object-cover w-full h-full rounded-md"
+            className="object-cover w-full h-full rounded-md" 
           />
           <p
             ref={textRef}
