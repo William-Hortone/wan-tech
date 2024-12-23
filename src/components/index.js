@@ -10,6 +10,7 @@ import Avatar from "./animations/Avatar";
 import Infos from "./Infos";
 import NavBtn from "./NavBtn";
 import PageTitle from "./PageTitle";
+import CardImg from "./CardImg";
 
 export {
   ViewServices,
@@ -23,5 +24,6 @@ export {
   Avatar,
   Infos,
   NavBtn,
-  PageTitle
+  PageTitle,
+  CardImg
 };
