@@ -1,4 +1,7 @@
   
+  .App{
+    overflow-x: hidden !important;
+  }
   /* Text animation on scroll */
   .app__desc-content{
     color: black;
