@@ -9,7 +9,7 @@ const About = ({ setShowMenu, showMenu }) => {
         <Infos />
         <NavBtn setShowMenu={setShowMenu} />
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
-        {/* <Introduction setShowMenu={setShowMenu} showMenu={showMenu} /> */}
+        <Introduction setShowMenu={setShowMenu} showMenu={showMenu} />
       </section>
       <Footer />
     </>

@@ -1,21 +1,25 @@
 import React from "react";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
+import { Link } from "react-router-dom";
 const NavBtn = ({ setShowMenu }) => {
   // const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <div className="flex items-center justify-between w-full h-16 px-0 lg:px-16 ">
-        <button className="flex items-center gap-2 rounded-sm cursor-pointer app__button group">
+        <Link
+          to="/"
+          className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
+        >
           <div className="flex items-center w-[130px] md:w-[200px]  justify-start app__button-content bg-basic">
             <p className="whitespace-nowrap " style={{ color: "white" }}>
               WAN TECH
             </p>
             <p className="whitespace-nowrap " style={{ color: "white" }}>
-              WAN TECH{" "}
+              WAN TECH
             </p>
           </div>
-        </button>
+        </Link>
 
         <button
           onClick={() => setShowMenu(true)}

@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ServiceItem, Title } from "../../components";
 
 import video from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
+import video3 from "../../assets/video3.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,16 +56,16 @@ const ServicesView = () => {
             bgColor="#C3ABFF"
             color="#000000"
             className="service-item"
-            video={video}
+            video={video2}
           />
           <ServiceItem
-            title="LOGO & AFFICHES"
+            title="LOGO ET AFFICHES"
             text="Votre image de marque commence par un logo percutant et des affiches attrayantes. Nous travaillons en étroite collaboration avec vous pour comprendre vos valeurs et votre vision, afin de créer des éléments graphiques qui captivent votre audience."
             img=""
             bgColor="#FF6F61"
             color="#000000"
             className="service-item"
-            video={video}
+            video={video3}
           />
         </div>
       </section>

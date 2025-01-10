@@ -88,7 +88,7 @@ const Footer = () => {
 
             <div className="flex flex-col items-center md:flex-row md:justify-between">
               <p className="font-semibold footer-element">WanTech@2025</p>
-              <p className="font-semibold footer-element">Designed By William Hortone</p>
+              <p className="font-semibold footer-element">Designed By WanTech</p>
             </div>
 
             <div className="absolute flex-col items-center hidden -translate-x-1/2 md:flex bottom-8 left-1/2">

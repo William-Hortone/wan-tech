@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Infos, NavBar, NavBtn, PageTitle } from "../components";
+import { Footer, Infos, NavBar, NavBtn } from "../components";
 import { Portfolio } from "../containers";
 
 const Projects = ({ setShowMenu, showMenu }) => {
@@ -16,10 +16,10 @@ const Projects = ({ setShowMenu, showMenu }) => {
 
         {/* Wrap Portfolio in a container with overflow: hidden */}
         <div className="">
-          <Portfolio />  
+          <Portfolio />
         </div>
       </section>
-        <Footer />
+      <Footer />
     </>
   );
 };

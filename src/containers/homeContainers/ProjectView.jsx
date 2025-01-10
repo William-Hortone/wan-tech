@@ -134,7 +134,7 @@ const ProjectView = () => {
             <span>Parcourez notre portfolio et découvrez</span>
           </h3>
           <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
-            <span>nos réalisations.</span>
+            <span>nos réalisations</span>
           </h3>
         </div>
 
