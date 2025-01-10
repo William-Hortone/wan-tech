@@ -5,7 +5,7 @@ import { Portfolio } from "../containers";
 const Projects = ({ setShowMenu, showMenu }) => {
   return (
     <>
-      <section className="h-auto pb-20 bg-slate-300 ">
+      <section className="h-auto pb-20 overflow-x-hidden bg-slate-300 ">
         <Infos />
         <NavBtn setShowMenu={setShowMenu} />
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />

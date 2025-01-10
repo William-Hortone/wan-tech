@@ -5,7 +5,7 @@ import { Footer, Infos, NavBar, NavBtn } from "../components";
 const About = ({ setShowMenu, showMenu }) => {
   return (
     <>
-      <section className="h-auto pb-20 bg-white">
+      <section className="h-auto pb-20 overflow-x-hidden bg-white">
         <Infos />
         <NavBtn setShowMenu={setShowMenu} />
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
