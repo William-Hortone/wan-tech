@@ -8,7 +8,6 @@ const NavBtn = ({ setShowMenu }) => {
     <>
       <div className="flex items-center justify-between w-full h-16 px-0 lg:px-16 ">
         <Link
-          to="/"
           className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
         >
           <div className="flex items-center w-[130px] md:w-[200px]  justify-start app__button-content bg-basic">
