@@ -12,7 +12,7 @@ const Header = ({setShowMenu,showMenu}) => {
    
 
         {/* TitleLogo */}
-        <div className="absolute w-3/4 transform -translate-x-1/2 top-1/2 md:bottom-0 left-1/2 font-fontBase bg-gsreen-600">
+        <div className="absolute bottom-0 w-3/4 transform -translate-x-1/2 left-1/2 font-fontBase bg-gsreen-600">
           <div className="absolute w-full h-auto transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             <TitleLogo />
           </div>
@@ -23,7 +23,6 @@ const Header = ({setShowMenu,showMenu}) => {
         {/* <div className="absolute left-4 bottom-3">
           <CircleAnimation />
         </div> */}
-
 
       </header>
     </>
