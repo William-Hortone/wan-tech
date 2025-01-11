@@ -1,12 +1,13 @@
 import React from "react";
 import "./button.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Button = ({colorText, title, width}) => {
+const Button = ({colorText, title,link, width}) => {
   return (
     <>
 
-      <button className={`app__button  md:w-[${width}] w-[150px]` } >
+      <Link to={link} className={`app__button  md:w-[${width}] w-[150px]` } >
         <div className="icon-btn">
           <FaArrowRight
             color="black"
@@ -31,7 +32,7 @@ const Button = ({colorText, title, width}) => {
           <p style={{color: colorText}}>{title}</p>
           <p style={{color: colorText}}>{title} </p>
         </div>
-      </button>
+      </Link>
     </>
   );
 };

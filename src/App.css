@@ -59,6 +59,18 @@
     width: 100%;
     height: 100%;
     position: relative;
+    /* opacity: 0; */
+    /* animation: page-transit 3s 0.3s ease forwards; */
+
+  }
+  .pageWrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    /* display: none; */
+    background-color: black;
+    animation: page-transit 3s 0.3s ease forwards;
 
   }
   
@@ -87,8 +99,16 @@
     transform: translateX(100%);
   }
 }
+@keyframes page-transit {
+  100% {
+    opacity: 1;
+    background-color: transparent;
+
+  }
+}
 @keyframes img-appearance {
   100% {
     opacity: 1;
+    /* display: block; */
   }
 }

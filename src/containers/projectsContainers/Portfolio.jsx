@@ -2,30 +2,38 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import { CardImg, PageTitle } from "../../components";
 import images from "../../constants/images";
-// import { Infos, NavBar, NavBtn, PageTitle } from "../../components";
 
 const Portfolio = () => {
   const wrapperEl = useRef();
 
+  // Track scroll position of the window, no specific target needed for global scroll tracking
   const { scrollYProgress } = useScroll({
-    target: wrapperEl,
+    target: wrapperEl, // Tracking the scroll position of the section
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
+
+  // Transform the scrollYProgress into a horizontal translation range
+  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-90%"]);
+
   return (
-    <>
-      <section ref={wrapperEl} className="h-[300vh] relative pb-20 ">
-        <div className="sticky top-0 flex flex-col items-center h-screen overflow-hidden">
-          <div className="flex flex-col items-center justify-center w-full gap-16 my-8">
-            <PageTitle title="Portfolio" />
-          </div>
-          <motion.div style={{ x }} className="flex gap-4 ">
-            <CardImg title="project1" img={images.img3} />
-            <CardImg title="project2" img={images.img4} />
-            <CardImg title="project3" img={images.project1} />
-          </motion.div>
+    <section ref={wrapperEl} className="relative h-[300vh] w-full ">
+      {/* The sticky div will stay at the top of the viewport */}
+      <div className="sticky top-0 flex flex-col items-center h-screen overflow-hidden ">
+        <div className="flex flex-col items-center justify-center w-full gap-16 my-8">
+          <PageTitle title="Portfolio" />
         </div>
-      </section>
-    </>
+
+        {/* Horizontal scrolling area */}
+        <motion.div
+          style={{ x }}
+          className="flex gap-4 w-max" // w-max ensures the container width matches its content
+        >
+          <CardImg link='https://gericht-a.netlify.app' title="project1" img={images.img3} />
+          <CardImg link='https://fdp-app-client.vercel.app' title="project4" img={images.img5} />
+          <CardImg link='https://onabatiment.com' title="project2" img={images.img4} />
+          <CardImg link='' title="project3" img={images.project1} />
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

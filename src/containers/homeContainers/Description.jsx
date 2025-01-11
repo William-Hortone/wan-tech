@@ -17,7 +17,7 @@ const Description = () => {
         y: "0%",
         duration: 2,
         ease: "power3.out",
-        stagger: 0.1, 
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".app__desc-content",
           start: "top 80%",
@@ -48,7 +48,12 @@ const Description = () => {
         </h3>
       </div>
 
-      <Button colorText="#FFFFFF" width='250px' title="Voir Plus" />
+      <Button
+        link="/about"
+        colorText="#FFFFFF"
+        width="250px"
+        title="Voir Plus"
+      />
     </section>
   );
 };
