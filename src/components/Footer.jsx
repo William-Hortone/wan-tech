@@ -3,6 +3,9 @@ import { SiKingstontechnology } from "react-icons/si";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoLogoWechat } from "react-icons/io5";
+import { FaRegEnvelope,FaFacebookF  } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +57,7 @@ const Footer = () => {
       {/* Main Footer Wrapper */}
       <section className="footer-wrapper relative -z-10 bg-black h-[200vh]">
         {/* Fixed Footer */}
-        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic -z-10">
+        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic ">
           <div className="relative flex flex-col justify-between h-full px-4 py-8 translate-y-full opacity-0 md:p-16 footer-content">
             <h3 className="w-3/4 md:w-1/2 footer-element font-fontAlt 2xl:text-2xl">
               Il n'y a qu'un pas à franchir entre votre idée et sa réalisation.
@@ -66,29 +69,53 @@ const Footer = () => {
                 <h2 className="font-bold uppercase footer-element font-fontAlt">
                   Contactez-nous
                 </h2>
+              
+                {/* <h2 className="mt-4 font-bold uppercase footer-element font-fontAlt">
+                  Liens Rapides
+                </h2> */}
+                <div className="flex gap-4 font-medium footer-element">
+                  <FaWhatsapp size={20} color="#E2E2E2" />
+                  <span>Whatsapp : +241 04967151</span>
+                </div>
+                <div className="flex gap-4 font-medium footer-element">
+                  <IoLogoWechat size={20} color="#E2E2E2" />
+                  <span>Wechat  : +86 19128302455</span>
+                </div>
+                <div className="flex gap-4 font-medium footer-element">
+                  <FaRegEnvelope size={20} color="#E2E2E2" />
+                  <span>wantech@gmail.com</span>
+                </div>
+                <div className="flex gap-4 font-medium footer-element">
+                  <FaFacebookF  size={20} color="#E2E2E2" />
+                  <span>FacebookF </span>
+                </div>
                 <h3 className="font-medium footer-element">
                   wantech@gmail.com
                 </h3>
-                <h2 className="mt-4 font-bold uppercase footer-element font-fontAlt">
-                  Liens Rapides
-                </h2>
-                <Link to='/'  className="font-medium cursor-pointer footer-element">Acceuil</Link>
-                <Link to='/about' className="font-medium cursor-pointer footer-element">A propos</Link>
-                <Link to='/projects' className="font-medium cursor-pointer footer-element">Projets</Link>
+                <Link
+                  to="/about"
+                  className="font-medium cursor-pointer footer-element"
+                >
+                  A propos
+                </Link>
+                <Link
+                  to="/projects"
+                  className="font-medium cursor-pointer footer-element"
+                >
+                  Projets
+                </Link>
               </div>
 
               <div>
-                <SiKingstontechnology
-                  className="text-basic footer-icon size-[100px] md:size-60 lg:size-80"
-                  // style={{ fontSize: "75px" }} // Default size for small screens
-                  // size={undefined} // Disable the fixed `size` prop
-                />
+                <SiKingstontechnology className="text-basic footer-icon size-[100px] md:size-60 lg:size-80" />
               </div>
             </div>
 
             <div className="flex flex-col items-center md:flex-row md:justify-between">
               <p className="font-semibold footer-element">WanTech@2025</p>
-              <p className="font-semibold footer-element">Designed By WanTech</p>
+              <p className="font-semibold footer-element">
+                Designed By WanTech
+              </p>
             </div>
 
             <div className="absolute flex-col items-center hidden -translate-x-1/2 md:flex bottom-8 left-1/2">

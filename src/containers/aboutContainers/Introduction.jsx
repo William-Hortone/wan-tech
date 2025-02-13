@@ -103,7 +103,7 @@ const Introduction = ({ setShowMenu, showMenu }) => {
         </div>
 
         {/* Content Section with Animated h2s */}
-        <div className="flex flex-col items-center gap-8 my-20 content ">
+        <div className="flex flex-col items-center gap-8 pb-20 mt-20 content ">
           <h2 className="text-3xl font-bold md:text-6xl lg:text-8xl font-fontAlt h2-1">
             NOUS DONNONS VIE
           </h2>

@@ -22,12 +22,12 @@ const PageTransition = ({ children }) => {
   }, [location]);
 
   return (
-    <div className="page-wrapper">
-      {/* Page Transition Effect */}
-      <div className="fixed top-0 left-0 z-50 w-full h-full bg-black page-transition"></div>
-
-      {/* Content */}
-      <div className="page-content">{children}</div>
+    <div className="pageContainer">
+    
+      <div className="pageWrapper">
+      {children}
+      
+      </div>
     </div>
   );
 };

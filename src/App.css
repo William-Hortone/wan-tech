@@ -84,7 +84,7 @@
   bottom: 0;
   transform: translateX(-100%);
   z-index: 100;
-  background-color: bisque;
+  background-color: #FF6F61;
   animation: slide-in 0.75s ease-out forwards,
     slide-out 0.75s 1s ease-out forwards;
 }

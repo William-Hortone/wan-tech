@@ -1,13 +1,13 @@
 import React from "react";
 import { Header, Description, ServicesView, ProjectView } from "../containers";
-import { Footer, PageTransition } from "../components";
+import { Footer } from "../components";
 
 const Home = ({ setShowMenu, showMenu }) => {
   return (
     <>
       {/* <PageTransition> */}
-      <section className="h-auto pb-20 overflow-x-hidden bg-white pageContainer">
-        <section className="bg- pageWrapper">
+      <section className="h-auto overflow-x-hidden bg-black pageContainer">
+        <section className="bg-black pageWrapper">
           <Header setShowMenu={setShowMenu} showMenu={showMenu} />
           <Description />
           <ServicesView />

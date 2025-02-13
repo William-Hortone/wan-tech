@@ -11,7 +11,7 @@ import Infos from "./Infos";
 import NavBtn from "./NavBtn";
 import PageTitle from "./PageTitle";
 import CardImg from "./CardImg";
-import PageTransition from "./PageTransition";
+import PageTransition from "./animations/PageTransition";
 
 
 export {
