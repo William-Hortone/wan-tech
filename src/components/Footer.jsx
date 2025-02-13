@@ -5,7 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoWechat } from "react-icons/io5";
-import { FaRegEnvelope,FaFacebookF  } from "react-icons/fa6";
+import { FaRegEnvelope, FaFacebookF } from "react-icons/fa6";
+import images from "../constants/images";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,32 +25,6 @@ const Footer = () => {
         scrub: 1,
       },
     });
-
-    // Staggered animation for each child element in footer
-    // gsap.from(".footer-element", {
-    //   y: 50,
-    //   opacity: 0,
-    //   stagger: 0.3,
-    //   duration: 1.2,
-    //   ease: "power2.out",
-    //   scrollTrigger: {
-    //     trigger: ".footer-wrapper",
-    //     start: "top bottom",
-    //   },
-    // });
-
-    // Icon rotation for visual impact
-    // gsap.from(".footer-icon", {
-    //   rotate: -45,
-    //   scale: 0.8,
-    //   opacity: 0,
-    //   duration: 1.5,
-    //   ease: "elastic.out(1, 0.5)",
-    //   scrollTrigger: {
-    //     trigger: ".footer-wrapper",
-    //     start: "top bottom",
-    //   },
-    // });
   }, []);
 
   return (
@@ -57,37 +32,41 @@ const Footer = () => {
       {/* Main Footer Wrapper */}
       <section className="footer-wrapper relative -z-10 bg-black h-[200vh]">
         {/* Fixed Footer */}
-        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic ">
+        <footer className="fixed bottom-0 left-0 flex flex-col justify-between w-full h-screen overflow-hidden bg-black z-7 text-basic">
           <div className="relative flex flex-col justify-between h-full px-4 py-8 translate-y-full opacity-0 md:p-16 footer-content">
+            {/* <div className="h-auto w-[150px]">
+              <img className="object-cover w-full h-full" src={images.logo} alt="" />
+            </div> */}
             <h3 className="w-3/4 md:w-1/2 footer-element font-fontAlt 2xl:text-2xl">
               Il n'y a qu'un pas à franchir entre votre idée et sa réalisation.
               Nous donnons vie à vos projets grâce à des solutions digitales sur
               mesure.
             </h3>
-            <div className="flex justify-between mt-8">
+
+            <div className="flex justify-between mt-">
               <div className="flex flex-col mr-4 ">
                 <h2 className="font-bold uppercase footer-element font-fontAlt">
                   Contactez-nous
                 </h2>
-              
+
                 {/* <h2 className="mt-4 font-bold uppercase footer-element font-fontAlt">
                   Liens Rapides
                 </h2> */}
-                <div className="flex gap-4 font-medium footer-element">
+                <div className="flex gap-4 font-medium hover:cursor-pointer footer-element">
                   <FaWhatsapp size={20} color="#E2E2E2" />
                   <span>Whatsapp : +241 04967151</span>
                 </div>
-                <div className="flex gap-4 font-medium footer-element">
+                <div className="flex gap-4 font-medium hover:cursor-pointer footer-element">
                   <IoLogoWechat size={20} color="#E2E2E2" />
-                  <span>Wechat  : +86 19128302455</span>
+                  <span>Wechat : +86 19128302455</span>
                 </div>
-                <div className="flex gap-4 font-medium footer-element">
+                <div className="flex gap-4 font-medium cursor-pointer footer-element">
                   <FaRegEnvelope size={20} color="#E2E2E2" />
                   <span>wantech@gmail.com</span>
                 </div>
-                <div className="flex gap-4 font-medium footer-element">
-                  <FaFacebookF  size={20} color="#E2E2E2" />
-                  <span>FacebookF </span>
+                <div className="flex gap-4 font-medium cursor-pointer footer-element">
+                  <FaFacebookF size={20} color="#E2E2E2" />
+                  <span>Facebook : Wan Tech </span>
                 </div>
                 <h3 className="font-medium footer-element">
                   wantech@gmail.com
@@ -106,8 +85,14 @@ const Footer = () => {
                 </Link>
               </div>
 
-              <div>
-                <SiKingstontechnology className="text-basic footer-icon size-[100px] md:size-60 lg:size-80" />
+              <div className="h-auto  w-[250px]">
+                <img
+                  className="object-cover w-full h-full"
+                  src={images.logo}
+                  alt=""
+                />
+
+                {/* <SiKingstontechnology className="text-basic footer-icon size-[100px] md:size-60 lg:size-80" /> */}
               </div>
             </div>
 

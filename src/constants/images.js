@@ -4,8 +4,9 @@ import img2 from "../assets/2.png";
 import img3 from "../assets/3.png";
 import img4 from "../assets/4.png";
 import img5 from "../assets/5.png";
+import logo from "../assets/logo.png";
 import project1 from "../assets/project1.png";
 
-const images = { seeMore, img2, img1, img3, img4, img5, project1 };
+const images = { seeMore,logo, img2, img1, img3, img4, img5, project1 };
 
 export default images;
