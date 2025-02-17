@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Introduction } from "../containers";
 import { Footer, Infos, NavBar, NavBtn } from "../components";
 
-const About = ({ setShowMenu, showMenu }) => {
+const About = ({ setShowMenu, showMenu, handleMenuToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,8 +19,15 @@ const About = ({ setShowMenu, showMenu }) => {
         <section className="pageWrapper">
           <section className="bg-slate-300">
             <Infos />
-            <NavBtn setShowMenu={setShowMenu} />
-            <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
+            <NavBtn
+              setShowMenu={setShowMenu}
+              handleMenuToggle={handleMenuToggle}
+            />
+            <NavBar
+              setShowMenu={setShowMenu}
+              showMenu={showMenu}
+              handleMenuToggle={handleMenuToggle}
+            />
             {isVisible && (
               <Introduction setShowMenu={setShowMenu} showMenu={showMenu} />
             )}

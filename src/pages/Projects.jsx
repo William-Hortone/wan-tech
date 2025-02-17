@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Footer, Infos, NavBar, NavBtn } from "../components";
+import { Footer, Infos, NavBar, NavBtn, PageTitle } from "../components";
 import { Portfolio } from "../containers";
 
-const Projects = ({ setShowMenu, showMenu }) => {
+const Projects = ({ setShowMenu, showMenu, handleMenuToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,14 +19,14 @@ const Projects = ({ setShowMenu, showMenu }) => {
           <section className="bg- pageWrapper">
             <section className="bg-slate-300">
               <Infos />
-              <NavBtn setShowMenu={setShowMenu} />
-              <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
+     <NavBtn setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} />
+            <NavBar setShowMenu={setShowMenu} showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
 
-              {/* <div className="flex flex-col items-center justify-center w-full gap-16 mt-28">
-          <PageTitle title="Portfolio" />
-        </div> */}
+              <div className="flex flex-col items-center justify-center w-full gap-4 my-4">
+                <PageTitle title="Portfolio" />
+              </div>
 
-              {/* Wrap Portfolio in a container with overflow: hidden */}
+              {/* Portfolio  content */}
               <div className="">
                 <Portfolio />
               </div>

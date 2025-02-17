@@ -4,7 +4,7 @@ import { RxEyeClosed } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
-const NavBar = ({ showMenu, setShowMenu }) => {
+const NavBar = ({ showMenu, setShowMenu, handleMenuToggle }) => {
   const lettersRef = useRef([]);
 
   useEffect(() => {
@@ -47,7 +47,8 @@ const NavBar = ({ showMenu, setShowMenu }) => {
 
         {/* Close btn */}
         <button
-          onClick={() => setShowMenu(false)}
+          onClick={handleMenuToggle}
+          // onClick={() => setShowMenu(false)}
           className="absolute z-10 flex items-center gap-2 font-medium top-8 right-9 group"
         >
           <GoEyeClosed

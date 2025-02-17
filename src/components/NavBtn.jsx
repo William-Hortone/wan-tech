@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
 import { Link } from "react-router-dom";
-const NavBtn = ({ setShowMenu }) => {
+const NavBtn = ({ setShowMenu, handleMenuToggle }) => {
   // const [showMenu, setShowMenu] = useState(false);
   return (
     <>
@@ -21,7 +21,8 @@ const NavBtn = ({ setShowMenu }) => {
         </Link>
 
         <button
-          onClick={() => setShowMenu(true)}
+          onClick={handleMenuToggle}
+          // onClick={() => setShowMenu(true)}
           className="flex items-center gap-2 p-4 rounded-sm cursor-pointer app__button group"
           style={{}}
         >
