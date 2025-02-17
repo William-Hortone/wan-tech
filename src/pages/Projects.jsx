@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Footer, Infos, NavBar, NavBtn, PageTitle } from "../components";
 import { Portfolio } from "../containers";
 
-const Projects = ({ setShowMenu, showMenu, handleMenuToggle }) => {
+const Projects = ({ showMenu, handleMenuToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,8 +19,8 @@ const Projects = ({ setShowMenu, showMenu, handleMenuToggle }) => {
           <section className="bg- pageWrapper">
             <section className="bg-slate-300">
               <Infos />
-     <NavBtn setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} />
-            <NavBar setShowMenu={setShowMenu} showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
+              <NavBtn handleMenuToggle={handleMenuToggle} />
+              <NavBar showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
 
               <div className="flex flex-col items-center justify-center w-full gap-4 my-4">
                 <PageTitle title="Portfolio" />

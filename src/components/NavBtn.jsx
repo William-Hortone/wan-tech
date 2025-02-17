@@ -2,8 +2,8 @@ import React from "react";
 import { FaRegEye } from "react-icons/fa";
 import { GiSurroundedEye } from "react-icons/gi";
 import { Link } from "react-router-dom";
-const NavBtn = ({ setShowMenu, handleMenuToggle }) => {
-  // const [showMenu, setShowMenu] = useState(false);
+const NavBtn = ({  handleMenuToggle }) => {
+  
   return (
     <>
       <div className="flex items-center justify-between w-full h-16 px-0 lg:px-16 ">

@@ -7,7 +7,7 @@ import video1 from "../../assets/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Introduction = ({ setShowMenu, showMenu }) => {
+const Introduction = () => {
   useEffect(() => {
     const divAnimation = gsap.context(() => {
       gsap.fromTo(

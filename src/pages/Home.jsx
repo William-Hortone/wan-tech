@@ -2,13 +2,12 @@ import React from "react";
 import { Header, Description, ServicesView, ProjectView } from "../containers";
 import { Footer } from "../components";
 
-const Home = ({ setShowMenu, showMenu, handleMenuToggle }) => {
+const Home = ({ showMenu, handleMenuToggle }) => {
   return (
     <>
-      {/* <PageTransition> */}
       <section className="h-auto overflow-x-hidden bg-black pageContainer">
         <section className="bg-black pageWrapper">
-          <Header setShowMenu={setShowMenu}  handleMenuToggle={handleMenuToggle} showMenu={showMenu} />
+          <Header handleMenuToggle={handleMenuToggle} showMenu={showMenu} />
           <Description />
           <ServicesView />
           <ProjectView />
@@ -16,7 +15,6 @@ const Home = ({ setShowMenu, showMenu, handleMenuToggle }) => {
         <span className="transitElement" />
       </section>
       <Footer />
-      {/* </PageTransition> */}
     </>
   );
 };

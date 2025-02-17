@@ -1,14 +1,14 @@
 import React from "react";
 import { Avatar, Infos, NavBar, NavBtn, TitleLogo } from "./../../components";
 
-const Header = ({setShowMenu,showMenu, handleMenuToggle}) => {
-  // const [showMenu, setShowMenu] = useState(false);
+const Header = ({showMenu, handleMenuToggle}) => {
+
   return (
     <>
       <header className="relative z-10 w-screen h-screen bg-primary ">
         <Infos />
-        <NavBtn setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} />
-        <NavBar setShowMenu={setShowMenu} showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
+        <NavBtn handleMenuToggle={handleMenuToggle} />
+        <NavBar  showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
    
 
         {/* TitleLogo */}
@@ -19,10 +19,6 @@ const Header = ({setShowMenu,showMenu, handleMenuToggle}) => {
           <Avatar />
         </div>
 
-        {/* Circle text animation */}
-        {/* <div className="absolute left-4 bottom-3">
-          <CircleAnimation />
-        </div> */}
 
       </header>
     </>
