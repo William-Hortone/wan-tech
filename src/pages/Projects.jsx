@@ -27,9 +27,9 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
               </div>
 
               {/* Portfolio  content */}
-              <div className="">
+              {/* <div className=""> */}
                 <Portfolio />
-              </div>
+              {/* </div> */}
             </section>
           </section>
         )}
