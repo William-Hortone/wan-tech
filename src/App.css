@@ -94,8 +94,11 @@
     transform: translateX(0%);
   }
 }
+
 @keyframes slide-out {
   100% {
+   
+
     transform: translateX(100%);
   }
 }
@@ -109,6 +112,6 @@
 @keyframes img-appearance {
   100% {
     opacity: 1;
-    /* display: block; */
+    
   }
 }
