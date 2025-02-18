@@ -42,7 +42,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="md:h-[100vh] h-[70vh] pb-16 md:pb-0 w-full   flex items-center justify-center">
+    <section className="md:h-[100vh] h-[100vh] pb-16 md:pb-0 w-full   flex items-center justify-center">
       <div className="flex relative gap-4 items-center bg-slate-400 justify-between py-4 w-full max-w-[100%]">
         {/* Buttons for slide */}
         <button

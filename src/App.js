@@ -21,15 +21,15 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<Home setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
+          element={<Home  handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
         />
         <Route
           path="/about"
-          element={<About setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
+          element={<About  handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
         />
         <Route
           path="/projects"
-          element={<Projects setShowMenu={setShowMenu} handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
+          element={<Projects  handleMenuToggle={handleMenuToggle} showMenu={showMenu} />}
         />
       </Routes>
     </div>
