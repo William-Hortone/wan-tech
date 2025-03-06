@@ -42,7 +42,7 @@ const Footer = () => {
             mesure.
           </h3>
 
-          <div className="flex flex-col-reverse justify-between md:flex-row ">
+          <div className="flex flex-col-reverse justify-between md:flex-row">
             <div className="flex flex-col md:mr-4 ">
               <h2 className="font-bold uppercase footer-element font-fontAlt">
                 Contactez-nous

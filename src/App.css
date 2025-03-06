@@ -97,8 +97,7 @@
 
 @keyframes slide-out {
   100% {
-   
-
+  
     transform: translateX(100%);
   }
 }

@@ -9,7 +9,6 @@ const Description = () => {
   useEffect(() => {
     const textSpans = document.querySelectorAll(".content-text span");
 
-    //  timeline for staggered animations
     gsap.fromTo(
       textSpans,
       { y: "100%" },
@@ -21,8 +20,8 @@ const Description = () => {
         scrollTrigger: {
           trigger: ".app__desc-content",
           start: "top 80%",
-          end: "top 80%",
-          toggleActions: "play none none none",
+          end: "top 50%",
+          toggleActions: "play none none reverse",
         },
       }
     );

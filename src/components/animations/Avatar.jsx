@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import { Suspense } from "react"; // Import Suspense
+import { Suspense } from "react";
 
 const Avatar = () => {
   const gltf = useGLTF(
@@ -51,7 +51,8 @@ const Avatar = () => {
         <OrbitControls
           enablePan={false}
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
+          enableRotate={false}
+          maxPolarAngle={Math.PI / 2.5}
           minPolarAngle={Math.PI / 2.5}
         />
       </Canvas>
