@@ -5,12 +5,13 @@ import { Title } from "../../components";
 import images from "../../constants/images";
 import { useNavigate } from "react-router-dom";
 
-import video1 from "../../assets/video1.mp4"; 
+import video1 from "../../assets/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
   const [showMore, setShowMore] = useState(false);
+  const [showActive, setShowActive] = useState(false);
   const navigate = useNavigate();
   const buttonRef = useRef(null);
   const textRef = useRef(null);
@@ -80,9 +81,10 @@ const ProjectView = () => {
 
   // The function to go to the projects page
   const handleSeeMore = () => {
+    setShowActive(true);
     // the scaling animation
     gsap.to(buttonRef.current, {
-      scale: 14,
+      scale: 44,
       duration: 2,
 
       ease: "ease-in-out",
@@ -104,8 +106,8 @@ const ProjectView = () => {
   };
 
   return (
-    <section className="w-full h-[200vh] relative bg-black pb-8 z-20">
-      <section className="big-section w-full h-[100vh] relative bg-black z-10">
+    <section className="w-full h-[200vh]  bg-black pb-8 z-20">
+      <section className="big-section w-full h-[100vh]  bg-black z-10">
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
@@ -115,7 +117,7 @@ const ProjectView = () => {
         </h2>
         <div className="expanding-div w-[25%] md:w-[13%] h-24 bg-white absolute left-8 bottom-8">
           <video
-            className="object-cover w-full h-full" 
+            className="object-cover w-full h-full"
             autoPlay
             muted
             loop
@@ -139,30 +141,32 @@ const ProjectView = () => {
         </div>
 
         {/* See more button */}
-        <div
-          ref={buttonRef}
-          onClick={handleSeeMore}
-          className={
-            showMore
-              ? "relative w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore show-more"
-              : "relative w-[30%] md:w-[20%]  lg:w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore"
-          }
-        >
-          <img
-            src={images.seeMore}
-            alt="See More"
-            className="object-cover w-full h-full rounded-md" 
-          />
-          <p
-            ref={textRef}
+        <div className={showActive ? "active-btn" : "flex justify-center relative"}>
+          <div
+            ref={buttonRef}
+            onClick={handleSeeMore}
             className={
               showMore
-                ? "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-fontAlt  font-bold uppercase remove-text"
-                : "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[10px] md:text-lg font-bold font-fontAlt uppercase"
+                ? " z-50   w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore "
+                : "  z-50 w-[30%]  md:w-[20%]  lg:w-[15%] aspect-w-1 aspect-h-1 bg-[#000000] rounded-md content-seeMore"
             }
           >
-            Voir Plus
-          </p>
+            <img
+              src={images.seeMore}
+              alt="See More"
+              className="z-50 object-cover w-full h-full rounded-md"
+            />
+            <p
+              ref={textRef}
+              className={
+                showMore
+                  ? "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-fontAlt whitespace-nowrap  font-bold uppercase"
+                  : "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[10px] md:text-lg font-bold  whitespace-nowrap font-fontAlt uppercase"
+              }
+            >
+              Voir Plus
+            </p>
+          </div>
         </div>
       </section>
     </section>
