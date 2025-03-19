@@ -13,6 +13,7 @@ import PageTitle from "./PageTitle";
 import CardImg from "./CardImg";
 import PageTransition from "./animations/PageTransition";
 import SpeedText from "./customize/SpeedText";
+import  ViewParallax  from "./customize/ViewParallax";
 
 
 export {
@@ -30,5 +31,6 @@ export {
   PageTitle,
   CardImg,
   PageTransition,
-  SpeedText
+  SpeedText,
+  ViewParallax
 };

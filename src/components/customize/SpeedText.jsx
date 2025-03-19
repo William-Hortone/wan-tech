@@ -2,6 +2,7 @@ import React from "react";
 import { Cover } from "../ui/cover";
 import { Link } from "react-router-dom";
 
+
 export default function SpeedText() {
   return (
     <div>

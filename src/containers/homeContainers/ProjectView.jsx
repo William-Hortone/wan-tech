@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
-import { SpeedText, Title } from "../../components";
+import { SpeedText, Title, ViewParallax } from "../../components";
 
 import video1 from "../../assets/video1.mp4";
 
@@ -14,68 +14,68 @@ const ProjectView = () => {
   // const buttonRef = useRef(null);
   // const textRef = useRef(null);
 
-  useEffect(() => {
-    const expandingDiv = document.querySelector(".expanding-div");
-    const bigSection = document.querySelector(".big-section");
-    const textSpans = document.querySelectorAll(".content-text span");
+  // useEffect(() => {
+  //   const expandingDiv = document.querySelector(".expanding-div");
+  //   const bigSection = document.querySelector(".big-section");
+  //   const textSpans = document.querySelectorAll(".content-text span");
 
-    gsap.fromTo(
-      textSpans,
-      { y: "100%" },
-      {
-        y: "0%",
-        duration: 2,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".app__desc-content",
-          start: "top 80%",
-          end: "top 30%",
-          toggleActions: "play none none play",
-        },
-      }
-    );
+  //   gsap.fromTo(
+  //     textSpans,
+  //     { y: "100%" },
+  //     {
+  //       y: "0%",
+  //       duration: 2,
+  //       ease: "power3.out",
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: ".app__desc-content",
+  //         start: "top 80%",
+  //         end: "top 30%",
+  //         toggleActions: "play none none play",
+  //       },
+  //     }
+  //   );
 
-    // Timeline to set the position of the container
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: expandingDiv,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 0.3,
-        onEnter: () => {
-          bigSection.style.position = "fixed";
-          bigSection.style.top = "0";
-        },
-        onLeave: () => {
-          bigSection.style.position = "relative";
-        },
-        onEnterBack: () => {
-          bigSection.style.position = "relative";
-        },
-        onLeaveBack: () => {
-          bigSection.style.position = "relative";
-        },
-      },
-    });
+  //   // Timeline to set the position of the container
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: expandingDiv,
+  //       start: "top 80%",
+  //       end: "top 30%",
+  //       scrub: 0.3,
+  //       onEnter: () => {
+  //         bigSection.style.position = "fixed";
+  //         bigSection.style.top = "0";
+  //       },
+  //       onLeave: () => {
+  //         bigSection.style.position = "relative";
+  //       },
+  //       onEnterBack: () => {
+  //         bigSection.style.position = "relative";
+  //       },
+  //       onLeaveBack: () => {
+  //         bigSection.style.position = "relative";
+  //       },
+  //     },
+  //   });
 
-    // Animation for the expanding div
-    tl.to(expandingDiv, {
-      width: "90%",
-      height: "80vh",
-      left: "50%",
-      top: "50%",
-      translateX: "-50%",
-      translateY: "-50%",
-      zIndex: 10,
-      duration: 2,
-    });
+  //   // Animation for the expanding div
+  //   tl.to(expandingDiv, {
+  //     width: "90%",
+  //     height: "80vh",
+  //     left: "50%",
+  //     top: "50%",
+  //     translateX: "-50%",
+  //     translateY: "-50%",
+  //     zIndex: 10,
+  //     duration: 2,
+  //   });
 
-    return () => {
-      tl.kill();
-      bigSection.style.position = "relative";
-    };
-  }, []);
+  //   return () => {
+  //     tl.kill();
+  //     bigSection.style.position = "relative";
+  //   };
+  // }, []);
 
   // The function to go to the projects page
   // const handleSeeMore = () => {
@@ -104,8 +104,10 @@ const ProjectView = () => {
   // };
 
   return (
-    <section className="w-full h-[200vh]  bg-black pb-8 z-20">
-      <section className="big-section w-full h-[100vh]  bg-black z-20">
+    <section className="z-20 w-full h-auto pb-8 bg-black">
+      <ViewParallax />
+      {/* <SpeedText /> */}
+      {/* <section className="big-section w-full h-[100vh]  bg-black z-20">
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
@@ -125,11 +127,11 @@ const ProjectView = () => {
             Your browser does not support the video
           </video>
         </div>
-      </section>
+      </section> */}
 
       {/* See more project */}
-      <section className="z-0 flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary">
-        {/* <div className="">
+      {/* <section className="z-0 flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary"> */}
+      {/* <div className="">
           <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
             <span>Explorez notre portfolio et plongez au cœur de nos réalisations, reflétant notre expertise, notre créativité et notre engagement envers l’excellence.</span>
           </h3>
@@ -138,10 +140,9 @@ const ProjectView = () => {
           </h3>
 
         </div> */}
-        <SpeedText />
 
-        {/* See more button */}
-        {/* <div className={showActive ? "active-btn" : "flex justify-center relative"}>
+      {/* See more button */}
+      {/* <div className={showActive ? "active-btn" : "flex justify-center relative"}>
           <div
             ref={buttonRef}
             onClick={handleSeeMore}
@@ -168,7 +169,7 @@ const ProjectView = () => {
             </p>
           </div>
         </div> */}
-      </section>
+      {/* </section> */}
     </section>
   );
 };
