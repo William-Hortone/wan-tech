@@ -12,6 +12,7 @@ import NavBtn from "./NavBtn";
 import PageTitle from "./PageTitle";
 import CardImg from "./CardImg";
 import PageTransition from "./animations/PageTransition";
+import SpeedText from "./customize/SpeedText";
 
 
 export {
@@ -29,4 +30,5 @@ export {
   PageTitle,
   CardImg,
   PageTransition,
+  SpeedText
 };

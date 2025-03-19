@@ -1,20 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Title } from "../../components";
-import images from "../../constants/images";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { SpeedText, Title } from "../../components";
 
 import video1 from "../../assets/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
-  const [showMore, setShowMore] = useState(false);
-  const [showActive, setShowActive] = useState(false);
-  const navigate = useNavigate();
-  const buttonRef = useRef(null);
-  const textRef = useRef(null);
+  // const [showMore, setShowMore] = useState(false);
+  // const [showActive, setShowActive] = useState(false);
+  // const navigate = useNavigate();
+  // const buttonRef = useRef(null);
+  // const textRef = useRef(null);
 
   useEffect(() => {
     const expandingDiv = document.querySelector(".expanding-div");
@@ -80,34 +78,34 @@ const ProjectView = () => {
   }, []);
 
   // The function to go to the projects page
-  const handleSeeMore = () => {
-    setShowActive(true);
-    // the scaling animation
-    gsap.to(buttonRef.current, {
-      scale: 44,
-      duration: 2,
+  // const handleSeeMore = () => {
+  //   setShowActive(true);
+  //   // the scaling animation
+  //   gsap.to(buttonRef.current, {
+  //     scale: 44,
+  //     duration: 2,
 
-      ease: "ease-in-out",
-      onStart: () => {
-        //  opacity animation for the text
-        gsap.to(textRef.current, {
-          opacity: 0,
-          duration: 2.5,
-          ease: "ease",
-        });
-      },
-      onComplete: () => {
-        setShowMore(true);
-        setTimeout(() => {
-          navigate("/projects");
-        }, 400);
-      },
-    });
-  };
+  //     ease: "ease-in-out",
+  //     onStart: () => {
+  //       //  opacity animation for the text
+  //       gsap.to(textRef.current, {
+  //         opacity: 0,
+  //         duration: 2.5,
+  //         ease: "ease",
+  //       });
+  //     },
+  //     onComplete: () => {
+  //       setShowMore(true);
+  //       setTimeout(() => {
+  //         navigate("/projects");
+  //       }, 400);
+  //     },
+  //   });
+  // };
 
   return (
     <section className="w-full h-[200vh]  bg-black pb-8 z-20">
-      <section className="big-section w-full h-[100vh]  bg-black z-10">
+      <section className="big-section w-full h-[100vh]  bg-black z-20">
         <div className="p-8">
           <Title title="Projets" color="white" />
         </div>
@@ -130,18 +128,20 @@ const ProjectView = () => {
       </section>
 
       {/* See more project */}
-      <section className="flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary">
-        <div className="">
+      <section className="z-0 flex flex-col items-center justify-center w-full h-screen app__desc-content gap-36 bg-primary">
+        {/* <div className="">
           <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
-            <span>Parcourez notre portfolio et découvrez</span>
+            <span>Explorez notre portfolio et plongez au cœur de nos réalisations, reflétant notre expertise, notre créativité et notre engagement envers l’excellence.</span>
           </h3>
           <h3 className="text-3xl leading-10 text-center uppercase content-text font-fontBase 2xl:text-5xl md:text-3xl bg-primary">
-            <span>nos réalisations</span>
+            <span>Alors, cliquez ici</span>
           </h3>
-        </div>
+
+        </div> */}
+        <SpeedText />
 
         {/* See more button */}
-        <div className={showActive ? "active-btn" : "flex justify-center relative"}>
+        {/* <div className={showActive ? "active-btn" : "flex justify-center relative"}>
           <div
             ref={buttonRef}
             onClick={handleSeeMore}
@@ -167,7 +167,7 @@ const ProjectView = () => {
               Voir Plus
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
     </section>
   );
