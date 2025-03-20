@@ -7,7 +7,6 @@ import {
   NavBtn,
   PageTitle,
 } from "../components";
-import { Portfolio } from "../containers";
 
 const Projects = ({ showMenu, handleMenuToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,10 +20,10 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
   }, []);
   return (
     <>
-      <section className="h-auto min-h-[100vh] overflow-x-hidden bg-black pageContainer">
+      <section className="h-auto min-h-[100vh] overflow-x-hidden pb-4 bg-black pageContainer">
         {isVisible && (
-          <section className="bg- pageWrapper">
-            <section className="bg-slate-300">
+          <section className="pageWrapper">
+            <section className="pb-20 bg-slate-300">
               <Infos />
               <NavBtn handleMenuToggle={handleMenuToggle} />
               <NavBar showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
@@ -35,7 +34,6 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
 
               {/* Portfolio  content */}
               <CarouselProjects />
-              {/* <Portfolio /> */}
             </section>
           </section>
         )}

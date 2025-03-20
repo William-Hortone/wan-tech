@@ -97,7 +97,7 @@ const NavBar = ({ showMenu, handleMenuToggle }) => {
           </Link>
         </ul>
 
-        <p className="text-lg text-white font-fontAlt">wantech@gmail.com</p>
+        <p className="text-lg text-white font-fontAlt">williamhortone@gmail.com</p>
       </nav>
     </>
   );
