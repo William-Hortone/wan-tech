@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Footer, Infos, NavBar, NavBtn, PageTitle } from "../components";
+import {
+  CarouselProjects,
+  Footer,
+  Infos,
+  NavBar,
+  NavBtn,
+  PageTitle,
+} from "../components";
 import { Portfolio } from "../containers";
 
 const Projects = ({ showMenu, handleMenuToggle }) => {
@@ -27,9 +34,8 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
               </div>
 
               {/* Portfolio  content */}
-             
-                <Portfolio />
-        
+              <CarouselProjects />
+              {/* <Portfolio /> */}
             </section>
           </section>
         )}

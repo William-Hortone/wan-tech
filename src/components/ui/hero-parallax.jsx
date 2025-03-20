@@ -82,7 +82,7 @@ export const HeroParallax = ({ products }) => {
   );
 };
 
-export const Header = () => { 
+export const Header = () => {
   return (
     <div className="relative top-0 left-0 w-full px-4 py-20 mx-auto max-w-7xl md:py-40">
       <h1 className="text-2xl font-bold text-zinc-200 md:text-7xl dark:text-white">

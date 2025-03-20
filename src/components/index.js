@@ -14,7 +14,7 @@ import CardImg from "./CardImg";
 import PageTransition from "./animations/PageTransition";
 import SpeedText from "./customize/SpeedText";
 import  ViewParallax  from "./customize/ViewParallax";
-
+import CarouselProjects from "./customize/CarouselProjects";
 
 export {
   ViewServices,
@@ -32,5 +32,7 @@ export {
   CardImg,
   PageTransition,
   SpeedText,
-  ViewParallax
+  ViewParallax,
+  CarouselProjects
+
 };
