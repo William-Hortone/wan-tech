@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Description, ServicesView, ProjectView } from "../containers";
-import { Footer, Hero, HeroWrapper, LogoHero } from "../components";
+import { Footer, Hero, HeroWrapper, LogoHero, OverviewServices } from "../components";
 
 const Home = ({ showMenu, handleMenuToggle }) => {
   return (
@@ -11,7 +11,8 @@ const Home = ({ showMenu, handleMenuToggle }) => {
           <HeroWrapper />
           {/* <Hero /> */}
           <Description />
-          <ServicesView />
+          <OverviewServices />
+          {/* <ServicesView /> */}
           <ProjectView />
           <LogoHero />
         </section>

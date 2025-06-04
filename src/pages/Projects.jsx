@@ -7,6 +7,7 @@ import {
   NavBtn,
   PageTitle,
 } from "../components";
+import { PortfolioOverview } from "../containers";
 
 const Projects = ({ showMenu, handleMenuToggle }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +34,8 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
               </div>
 
               {/* Portfolio  content */}
-              <CarouselProjects />
+              <PortfolioOverview />
+              {/* <CarouselProjects /> */}
             </section>
           </section>
         )}

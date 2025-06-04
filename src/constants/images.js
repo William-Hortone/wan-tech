@@ -10,6 +10,16 @@ import img6 from "../assets/img1.png";
 import img7 from "../assets/img2.png";
 import img8 from "../assets/img3.png";
 import img9 from "../assets/img4.png";
+import mobileApp from "../assets/mobileapp.png";
+import mobileApp2 from "../assets/mobileapp2.png";
+import webSite from "../assets/website.jpg";
+import webSite2 from "../assets/website2.jpg";
+import logoIntro from "../assets/logointro.png";
+import project2 from "../assets/project2.jpg";
+import project3 from "../assets/project3.jpg";
+import project4 from "../assets/project4.jpg";
+import project5 from "../assets/project5.jpg";
+import project6 from "../assets/project6.jpg";
 
 const images = {
   seeMore,
@@ -24,6 +34,16 @@ const images = {
   img7,
   img8,
   img9,
+  mobileApp,
+  mobileApp2,
+  webSite,
+  webSite2,
+  logoIntro,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
 };
 
 export default images;

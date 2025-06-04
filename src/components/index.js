@@ -19,6 +19,7 @@ import { Hero } from "./Hero";
 import { Nav } from "./Nav";
 import HeroWrapper from "./HeroWrapper";
 import LogoHero from "./LogoHero";
+import OverviewServices from "./OverviewServices";
 
 
 export {
@@ -42,6 +43,7 @@ export {
   Hero,
   Nav,
   HeroWrapper,
-  LogoHero
+  LogoHero,
+  OverviewServices
 
 };
