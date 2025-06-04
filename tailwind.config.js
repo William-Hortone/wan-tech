@@ -9,13 +9,13 @@ module.exports = {
         cormorant: ['"Cormorant Upright"', 'serif'],
         opensans: ['"Open Sans"', 'sans-serif'],
       },
-      colors:{
-          primary:"#E2E2E2",
-          black:"#1E1E1E",
-          secondary:"#E2E2E2",
-          white:"#ffff",
-          basic:"#FF6F61",
-          origin:"#0F1112",
+      colors: {
+        primary: "#E2E2E2",
+        black: "#1E1E1E",
+        secondary: "#E2E2E2",
+        white: "#ffff",
+        basic: "#FF6F61",
+        origin: "#0F1112",
       },
       fontSize: {
         '6vw': '8vw',
@@ -34,6 +34,8 @@ module.exports = {
       animation: {
         textRotation: 'textRotation 8s linear infinite',
         'sliding-move': 'move 65s linear infinite',
+        'spin-slow': 'spin 20s linear infinite',
+        'gradient-x': 'gradient-x 8s ease infinite',
       },
 
     },

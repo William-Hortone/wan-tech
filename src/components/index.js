@@ -13,8 +13,13 @@ import PageTitle from "./PageTitle";
 import CardImg from "./CardImg";
 import PageTransition from "./animations/PageTransition";
 import SpeedText from "./customize/SpeedText";
-import  ViewParallax  from "./customize/ViewParallax";
+import ViewParallax from "./customize/ViewParallax";
 import CarouselProjects from "./customize/CarouselProjects";
+import { Hero } from "./Hero";
+import { Nav } from "./Nav";
+import HeroWrapper from "./HeroWrapper";
+import LogoHero from "./LogoHero";
+
 
 export {
   ViewServices,
@@ -33,6 +38,10 @@ export {
   PageTransition,
   SpeedText,
   ViewParallax,
-  CarouselProjects
+  CarouselProjects,
+  Hero,
+  Nav,
+  HeroWrapper,
+  LogoHero
 
 };
