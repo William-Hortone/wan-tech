@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import video1 from "../../assets/video1.mp4";
 import { PageTitle } from "../../components";
 import images from "../../constants/images";
-import video1 from "../../assets/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ const Introduction = () => {
         ".expanding-div",
         { width: "65%" },
         {
-          width: "90%",
+          width: "95%",
           duration: 1.5,
           ease: "power2.out",
           scrollTrigger: {
@@ -83,9 +83,9 @@ const Introduction = () => {
       <section>
         <div className="flex flex-col items-center justify-center w-full gap-16 mt-28 ">
           <PageTitle title="A-propos" />
-          <div className="expanding-div h-[50vh] md:h-[90vh] bg-basic">
+          <div className="expanding-div h-[50vh] md:h-[80vh] bg-basic rounded-xl">
             <img
-              className="object-cover w-full h-full rounded-md"
+              className="object-cover w-full h-full rounded-xl"
               src={images.img1}
               alt="banner"
             />

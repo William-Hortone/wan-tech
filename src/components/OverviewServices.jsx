@@ -1,39 +1,35 @@
-import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import { FiArrowDown, FiArrowUp } from "react-icons/fi";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import images from "../constants/images";
-
 import video from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
-import video3 from "../assets/video3.mp4";
 
 const OverviewServices = () => {
     const targetRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-    });
+    const { scrollYProgress } = useScroll({ target: targetRef });
 
     return (
-        <>
-            <section ref={targetRef} className="flex text-white bg-black">
-                <Content content={items} />
-                <Images content={items} scrollYProgress={scrollYProgress} />
-            </section>
-        </>
+        <section
+            id="services"
+            ref={targetRef}
+            className="flex flex-col text-white bg-black lg:flex-row"
+        >
+            <Content content={items} />
+            <Images content={items} scrollYProgress={scrollYProgress} />
+        </section>
     );
 };
 
 const Content = ({ content }) => {
     return (
-        <div className="w-full">
+        <div className="w-full lg:w-1/2">
             {content.map(({ id, title, description }, idx) => (
                 <div
                     key={id}
-                    className={`p-8 h-screen flex flex-col justify-between ${idx % 2 ? "bg-white text-black" : "bg-black text-white"
+                    className={`p-6 sm:p-8 h-[100vh] flex flex-col justify-between ${idx % 2 ? "bg-white text-black" : "bg-black text-white"
                         }`}
                 >
-                    <h3 className="text-3xl font-medium">{title}</h3>
-                    <p className="w-full max-w-md font-light">{description}</p>
+                    <h3 className="text-2xl font-bold uppercase sm:text-3xl">{title}</h3>
+                    <p className="max-w-xl text-sm font-light sm:text-base">{description}</p>
                 </div>
             ))}
         </div>
@@ -48,7 +44,7 @@ const Images = ({ content, scrollYProgress }) => {
     );
 
     return (
-        <div className="sticky top-0 w-24 h-screen overflow-hidden md:w-full">
+        <div className="sticky top-0 w-full h-screen overflow-hidden lg:w-1/2">
             <motion.div style={{ top }} className="absolute left-0 right-0">
                 {[...content].reverse().map(({ img, video, id, title }) => (
                     <div key={id} className="w-full h-screen">
@@ -99,8 +95,7 @@ const items = [
     {
         id: 4,
         title: "Video Marketing",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        description: "Nous donnons vie à votre message grâce à des vidéos captivantes et stratégiquement pensées. Qu’il s’agisse de présentations de produits, de contenus pour les réseaux sociaux ou de publicités percutantes, nous créons des vidéos qui retiennent l’attention, engagent votre audience et renforcent votre image de marque",
         video: video
     },
 ];

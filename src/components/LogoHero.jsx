@@ -32,9 +32,6 @@ const LogoHero = () => {
                 <p className="max-w-xl my-6 text-center">
                     Donnez vie à votre identité visuelle avec sens et impact.
                 </p>
-                <button className="bg-indigo-600 text-white text-base md:text-lg font-medium px-8 py-2 shadow-[3px_3px_0_black] hover:shadow-[1px_1px_0_black] hover:translate-x-[3px] hover:translate-y-[3px] transition-all">
-                    Try it free
-                </button>
             </div>
 
             <div className="flex overflow-hidden">

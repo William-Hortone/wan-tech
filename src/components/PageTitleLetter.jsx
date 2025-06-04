@@ -5,7 +5,7 @@ const PageTitleLetter = ({ letter, delay }) => {
   return (
     <div className="overflow-hidden p-box">
       <motion.span
-        className="inline-block text-[6vw] uppercase font-fontBase"
+        className="inline-block text-[15vw] md:text-[8vw] uppercase font-fontBase"
         initial={{ opacity: 1, y: 150 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

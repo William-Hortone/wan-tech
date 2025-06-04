@@ -1,13 +1,12 @@
 import {
   motion,
   useScroll,
-  useVelocity,
-  useTransform,
   useSpring,
+  useTransform,
+  useVelocity,
 } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { FiArrowDown } from "react-icons/fi";
-import { Nav } from "./Nav";
 
 export const Hero = () => {
   const targetRef = useRef(null);
@@ -32,7 +31,6 @@ export const Hero = () => {
     >
       <div className="sticky top-0 flex flex-col justify-between h-full md:h-[40vh] overflow-hidden">
       <span></span>
-        {/* <Nav /> */}
         <CenterCopy />
         <motion.p
           style={{ skewX, x }}
@@ -46,51 +44,6 @@ export const Hero = () => {
   );
 };
 
-// const Nav = () => {
-//   return (
-//     <div className="relative flex justify-between w-full p-6 mb-1">
-//       <p className="hidden text-xs text-neutral-400 md:block">
-//         40° 42' 46" N, 74° 0' 21" W
-//         <br />
-//       </p>
-//       <Logo />
-//       <Links />
-//     </div>
-//   );
-// };
-
-const Logo = () => {
-  // Temp logo from https://logoipsum.com/
-  return (
-    <svg
-      width="36"
-      height="auto"
-      viewBox="0 0 50 39"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="absolute translate-x-0 -translate-y-1/2 right-4 top-1/2 h-fit fill-neutral-950 md:right-1/2 md:translate-x-1/2"
-    >
-      <path
-        d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-        stopColor="#000000"
-      ></path>
-      <path
-        d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-        stopColor="#000000"
-      ></path>
-    </svg>
-  );
-};
-
-// const Links = () => {
-//   return (
-//     <nav className="flex gap-3 text-sm">
-//       <a href="#">Supply</a>
-//       <a href="#">Merch</a>
-//       <a href="#">Locations</a>
-//     </nav>
-//   );
-// };
 
 const CenterCopy = () => {
   return (

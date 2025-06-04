@@ -1,4 +1,3 @@
-import React from "react";
 import { Avatar, Infos, NavBar, NavBtn, TitleLogo } from "./../../components";
 
 const Header = ({showMenu, handleMenuToggle}) => {

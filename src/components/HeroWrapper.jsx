@@ -1,8 +1,6 @@
-import React from 'react'
-import { Nav } from './Nav'
-import Infos from './Infos'
 import { Hero } from './Hero'
-import { Link } from 'react-router-dom'
+import Infos from './Infos'
+import { Nav } from './Nav'
 
 const HeroWrapper = () => {
     return (
@@ -12,11 +10,11 @@ const HeroWrapper = () => {
                 <div className='flex flex-col items-center justify-center w-full h-full gap-4 px-4 lg:items-start'   >
                     <div className='px-8 text-center lg:text-left'>
                         <h2 className="text-3xl font-bold text-neutral-400 sm:text-5xl md:text-7xl">
-                            Nous donnons <br />
-                            Vie a vos projets <br />
-                            Chez
+                            Vos projets   <br />
+                            prennent vie  <br />
+                            entre
                             <span className="inline-block -skew-x-[18deg] pl-2 font-black text-basic">
-                                WANTECH.
+                                nos mains.
                             </span>
                         </h2>
                         <p className='py-4 text-neutral-400'>Nous transformons vos idees en solutions digitales innovantes
@@ -27,31 +25,34 @@ const HeroWrapper = () => {
                             évolution.</p>
                     </div>
                     <div className='flex gap-2'>
-                        <Link
+                        <a
+                        href='#contact' 
                             className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
                         >
-                            <div className="flex items-center w-[130px] md:w-[200px]  justify-start app__button-content bg-basic">
-                                <p className="whitespace-nowrap " style={{ color: "white" }}>
+                            <div className="flex items-center min-w-[150px] text-[12px] md:text-[15px] md:w-[200px]  justify-start app__button-content bg-basic">
+                                <p className="text-white whitespace-nowrap" >
                                     Nous Contacter
                                 </p>
-                                <p className="whitespace-nowrap " style={{ color: "white" }}>
+                                <p className="text-white whitespace-nowrap ">
                                     Nous Contacter
                                 </p>
                             </div>
-                        </Link>
+                        </a>
 
-                        <Link
+                        <a
+                        href='#services' 
+
                             className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
                         >
-                            <div className="flex items-center w-[130px] md:w-[200px]  justify-start border border-white app__button-content bg-transparent">
-                                <p className="whitespace-nowrap " style={{ color: "white" }}>
+                            <div className="flex items-center w-[130px] md:w-[200px] text-[12px]  md:text-[15px] justify-start border border-white app__button-content bg-transparent">
+                                <p className="text-white whitespace-nowrap " >
                                     nos services
                                 </p>
-                                <p className="whitespace-nowrap " style={{ color: "white" }}>
+                                <p className="text-white whitespace-nowrap " >
                                     nos services
                                 </p>
                             </div>
-                        </Link>
+                        </a>
                     </div>
                 </div>
 
