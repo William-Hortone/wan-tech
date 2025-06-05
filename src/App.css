@@ -1,6 +1,4 @@
-.App {
-  /* overflow-x: hidden !important; */
-}
+
 /* Text animation on scroll */
 .app__desc-content {
   color: black;
@@ -25,31 +23,11 @@
   justify-content: center;
   transform: translate(-50%, -50%);
   z-index: 999 !important;
-  /* background: red !important; */
 }
 .content-seeMore:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
-
-/* .remove-text{
-
-
-
-    animation: text-hide .4s ease;
-  }
-  
-  @keyframes text-hide{
-
-    to {
-      opacity: 0;
-    }
-  } */
-
-/* .show-more{
-    scale: 12;
-    transition: 1s ease-in-out;
-  } */
 .initial-bg {
   background-color: "#0000000";
   transition: background 0.3s ease;

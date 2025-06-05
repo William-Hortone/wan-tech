@@ -6,11 +6,11 @@ const PageTitle = ({ title }) => {
 
   return (
 
-      <div className=" flex items-center h-[100px]">
-        {letters.map((letter, index) => (
-          <PageTitleLetter key={index} letter={letter} delay={index * 0.1} />
-        ))}
-      </div>
+    <div className=" text-basic  flex items-center h-[100px]">
+      {letters.map((letter, index) => (
+        <PageTitleLetter key={index} letter={letter} delay={index * 0.1} />
+      ))}
+    </div>
   );
 };
 

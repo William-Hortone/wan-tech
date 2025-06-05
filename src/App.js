@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import { startTransition, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { About, Home, Projects } from "./pages";
-import { startTransition } from "react";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);

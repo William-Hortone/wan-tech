@@ -1,19 +1,9 @@
-import { SiInstagram, SiLinkedin, SiTwitter, SiYoutube } from "react-icons/si";
-import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { FiArrowRight } from "react-icons/fi";
+import { SiFacebook, SiTiktok, SiYoutube } from "react-icons/si";
 import images from "../constants/images";
 
-// export const Example = () => {
-//   return (
-//     <div className="h-screen bg-neutral-100">
-//       <Nav />
-//       <span className="absolute flex items-center gap-2 text-lg -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 text-violet-500">
-//         <span>Open me</span> <FiArrowUpRight />
-//       </span>
-//     </div>
-//   );
-// };
 
 export const Nav = () => {
     const [active, setActive] = useState(false);
@@ -21,7 +11,7 @@ export const Nav = () => {
     return (
         <>
             <div className="flex items-center justify-between w-full h-auto px-8 ">
-                <div className="w-[7%] h-auto">
+                <div className="w-[15%] md:w-[10%]  xl:w-[7%] h-auto">
                     <img src={images.logo} alt="website logo" className="object-cover size-full " />
                 </div>
                 <div className="hidden gap-4 md:flex ">
@@ -30,6 +20,7 @@ export const Nav = () => {
                             <motion.a
                                 key={idx}
                                 href={l.href}
+                                target="blank"
                                 initial={{ opacity: 0, y: -8 }}
                                 animate={{
                                     opacity: 1,
@@ -101,7 +92,7 @@ const NavLink = ({ children, href, idx }) => {
 };
 
 const Logo = () => {
-    // Temp logo from https://logoipsum.com/
+
     return (
         <motion.a
             initial={{ opacity: 0, y: -12 }}
@@ -114,7 +105,7 @@ const Logo = () => {
             href="#"
             className="grid w-20 h-20 transition-colors bg-transparent place-content-center rounded-br-xl rounded-tl-xl hover:bg-violet-50"
         >
-            <div className="w-[6vw] h-auto">
+            <div className="w-[15vw]  md:w-[6vw] h-auto">
                 <img src={images.logo} alt="website logo" className="object-cover size-full " />
             </div>
         </motion.a>
@@ -122,43 +113,63 @@ const Logo = () => {
 };
 
 const HamburgerButton = ({ active, setActive }) => {
+    const [showBackground, setShowBackground] = useState(false);
+
+    useEffect(() => {
+        let timeoutId;
+
+        if (active) {
+
+            setShowBackground(true);
+        } else {
+            // Menu closed: hide after 2 seconds
+            timeoutId = setTimeout(() => {
+                setShowBackground(false);
+            }, 2000);
+        }
+
+        return () => clearTimeout(timeoutId);
+    }, [active]);
+
     return (
         <>
-            <motion.div
-                initial={false}
-                animate={active ? "open" : "closed"}
-                variants={UNDERLAY_VARIANTS}
-                style={{ top: 16, right: 16 }}
-                className="fixed z-10 shadow-lg rounded-xl bg-gradient-to-br bg-violet-500 from-violet-600 to-violet-500 shadow-violet-800/20"
-            />
+            {/* Only render the background if showBackground is true */}
+            {showBackground && (
+                <motion.div
+                    initial={false}
+                    animate={active ? "open" : "closed"}
+                    variants={UNDERLAY_VARIANTS}
+                    // style={{ top: 16, right: 16 }}
+                    className="fixed top-0 right-0 z-30 shadow-lg rounded-xl bg-gradient-to-br from-violet-600 to-violet-500 shadow-violet-800/20"
+                />
+            )}
 
             <motion.button
                 initial={false}
                 animate={active ? "open" : "closed"}
                 onClick={() => setActive((pv) => !pv)}
-                className={`group relative  z-50 h-20 w-20 bg-white/0 transition-all hover:bg-white/20 ${active ? "rounded-bl-xl rounded-tr-xl" : "rounded-xl"
+                className={`group relative z-50 h-16 md:h-20 w-20 bg-white/0 transition-all hover:bg-white/20 ${active ? "rounded-bl-xl fixed top-6 md:top-0 right-2 rounded-tr-xl" : "rounded-xl"
                     }`}
             >
                 <motion.span
                     variants={HAMBURGER_VARIANTS.top}
-                    className="absolute block w-10 h-1 bg-white"
+                    className="absolute block w-10 h-1 bg-basic"
                     style={{ y: "-50%", left: "50%", x: "-50%" }}
                 />
                 <motion.span
                     variants={HAMBURGER_VARIANTS.middle}
-                    className="absolute block w-10 h-1 bg-white"
+                    className="absolute block w-10 h-1 bg-basic"
                     style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
                 />
                 <motion.span
                     variants={HAMBURGER_VARIANTS.bottom}
-                    className="absolute block w-5 h-1 bg-white"
+                    className="absolute block w-5 h-1 bg-basic"
                     style={{ x: "-50%", y: "50%" }}
                 />
             </motion.button>
         </>
     );
 };
-
 const FooterCTAs = () => {
     return (
         <>
@@ -186,7 +197,8 @@ const FooterCTAs = () => {
                 })}
             </div>
 
-            <motion.button
+            <motion.a
+            href="#contact"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{
                     opacity: 1,
@@ -200,47 +212,44 @@ const FooterCTAs = () => {
                 exit={{ opacity: 0, y: 8 }}
                 className="absolute flex items-center gap-2 px-3 py-3 text-4xl uppercase transition-colors rounded-full bottom-2 right-2 bg-violet-700 text-violet-200 hover:bg-white hover:text-violet-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
             >
-                <span className="hidden md:block">contact us</span> <FiArrowRight />
-            </motion.button>
+                <span className="hidden md:block">contactez nous</span> <FiArrowRight />
+            </motion.a>
         </>
     );
 };
 
 const LINKS = [
     {
-        title: "home",
-        href: "#",
+        title: "Accueil",
+        href: "/",
     },
     {
-        title: "features",
-        href: "#",
+        title: "A Propos",
+        href: "/about",
     },
     {
-        title: "blog",
-        href: "#",
+        title: "Projets",
+        href: "/projects",
     },
     {
-        title: "careers",
-        href: "#",
+        title: "Contact",
+        href: "#contact",
     },
 ];
 
 const SOCIAL_CTAS = [
+  
     {
-        Component: SiTwitter,
-        href: "#",
+        Component: SiFacebook,
+        href: "https://www.facebook.com/profile.php?id=100066250815544",
     },
-    {
-        Component: SiInstagram,
-        href: "#",
-    },
-    {
-        Component: SiLinkedin,
-        href: "#",
+      {
+        Component: SiTiktok,
+        href: "https://www.tiktok.com/@williamhortone?_t=ZS-8wxKoI4Yleq&_r=1",
     },
     {
         Component: SiYoutube,
-        href: "#",
+        href: "https://youtu.be/a9ijKu06ILY?si=9a8uhOTSTGB3K4Iv",
     },
 ];
 

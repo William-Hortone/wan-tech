@@ -1,17 +1,14 @@
-import React from "react";
-import { Header, Description, ServicesView, ProjectView } from "../containers";
-import { Footer, Hero, HeroWrapper, LogoHero } from "../components";
+import { Footer, HeroWrapper, LogoHero, OverviewServices } from "../components";
+import { Description, ProjectView } from "../containers";
 
-const Home = ({ showMenu, handleMenuToggle }) => {
+const Home = () => {
   return (
     <>
-      <section className="h-auto bg-black pageContainer">
+      <section className="z-10 h-auto bg-black pageContainer">
         <section className="bg-black pageWrapper">
-          {/* <Header handleMenuToggle={handleMenuToggle} showMenu={showMenu} /> */}
           <HeroWrapper />
-          {/* <Hero /> */}
           <Description />
-          <ServicesView />
+          <OverviewServices />
           <ProjectView />
           <LogoHero />
         </section>
