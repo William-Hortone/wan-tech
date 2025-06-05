@@ -21,6 +21,9 @@ import {
     SiGenius,
     SiGodaddy,
 } from "react-icons/si";
+import images from "../constants/images";
+// import images from "../constants/images";
+// import images from './../constants/images';
 
 const LogoHero = () => {
     return (
@@ -73,46 +76,45 @@ const TranslateWrapper = ({ children, reverse }) => {
     );
 };
 
-const LogoItem = ({ Icon }) => {
+const LogoItem = ({ logo }) => {
     return (
-        <a
-            href="/"
-            rel="nofollow"
-            target="_blank"
-            className="flex items-center justify-center w-16 h-16 text-black transition-colors md:w-24 md:h-24 hover:bg-slate-200"
+        <div
+            className="flex items-center justify-center w-16 h-16 text-black transition-colors md:w-24 md:h-24"
         >
-            <Icon className="text-4xl md:text-5xl" />
-        </a>
+            {/* <Icon className="text-4xl md:text-5xl" /> */}
+
+            <img src={logo} className="object-cover w-full h-full" alt="logo" />
+        </div>
     );
 };
 
 const LogoItemsTop = () => (
     <>
-        <LogoItem Icon={SiNike} />
-        <LogoItem Icon={Si3M} />
-        <LogoItem Icon={SiAbstract} />
-        <LogoItem Icon={SiAdobe} />
-        <LogoItem Icon={SiAirtable} />
-        <LogoItem Icon={SiAmazon} />
-        <LogoItem Icon={SiBox} />
-        <LogoItem Icon={SiBytedance} />
-        <LogoItem Icon={SiChase} />
-        <LogoItem Icon={SiCloudbees} />
+        <LogoItem logo={images.logo2} />
+        <LogoItem logo={images.logo3} />
+        <LogoItem logo={images.logo1} />
+        <LogoItem logo={images.logo8} />
+        <LogoItem logo={images.logo6} />
+        <LogoItem logo={images.logo5} />
+        <LogoItem logo={images.logo7} />
+        <LogoItem logo={images.logo9} />
+        <LogoItem logo={images.logo10} />
+
     </>
 );
 
 const LogoItemsBottom = () => (
     <>
-        <LogoItem Icon={SiBmw} />
-        <LogoItem Icon={SiBurton} />
-        <LogoItem Icon={SiBuildkite} />
-        <LogoItem Icon={SiCouchbase} />
-        <LogoItem Icon={SiDailymotion} />
-        <LogoItem Icon={SiDeliveroo} />
-        <LogoItem Icon={SiEpicgames} />
-        <LogoItem Icon={SiGenius} />
-        <LogoItem Icon={SiGodaddy} />
-        <LogoItem Icon={SiHeroku} />
+        <LogoItem logo={images.logo2} />
+        <LogoItem logo={images.logo3} />
+        <LogoItem logo={images.logo1} />
+        <LogoItem logo={images.logo8} />
+        <LogoItem logo={images.logo6} />
+        <LogoItem logo={images.logo5} />
+        <LogoItem logo={images.logo7} />
+        <LogoItem logo={images.logo9} />
+        <LogoItem logo={images.logo10} />
+
     </>
 );
 

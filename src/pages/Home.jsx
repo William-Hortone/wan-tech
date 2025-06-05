@@ -1,7 +1,7 @@
 import { Footer, HeroWrapper, LogoHero, OverviewServices } from "../components";
 import { Description, ProjectView } from "../containers";
 
-const Home = ({ showMenu, handleMenuToggle }) => {
+const Home = () => {
   return (
     <>
       <section className="z-10 h-auto bg-black pageContainer">

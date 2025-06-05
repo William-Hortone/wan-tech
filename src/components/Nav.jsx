@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { SiInstagram, SiLinkedin, SiFacebook,SiTiktok,  SiYoutube } from "react-icons/si";
+import { SiFacebook, SiTiktok, SiYoutube } from "react-icons/si";
 import images from "../constants/images";
 
 
@@ -197,7 +197,8 @@ const FooterCTAs = () => {
                 })}
             </div>
 
-            <motion.button
+            <motion.a
+            href="#contact"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{
                     opacity: 1,
@@ -211,8 +212,8 @@ const FooterCTAs = () => {
                 exit={{ opacity: 0, y: 8 }}
                 className="absolute flex items-center gap-2 px-3 py-3 text-4xl uppercase transition-colors rounded-full bottom-2 right-2 bg-violet-700 text-violet-200 hover:bg-white hover:text-violet-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
             >
-                <span className="hidden md:block">contact us</span> <FiArrowRight />
-            </motion.button>
+                <span className="hidden md:block">contactez nous</span> <FiArrowRight />
+            </motion.a>
         </>
     );
 };
@@ -244,11 +245,11 @@ const SOCIAL_CTAS = [
     },
       {
         Component: SiTiktok,
-        href: "#",
+        href: "https://www.tiktok.com/@williamhortone?_t=ZS-8wxKoI4Yleq&_r=1",
     },
     {
         Component: SiYoutube,
-        href: "#",
+        href: "https://youtu.be/a9ijKu06ILY?si=9a8uhOTSTGB3K4Iv",
     },
 ];
 

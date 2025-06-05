@@ -67,7 +67,7 @@ const Footer = () => {
                 </a>
                 <a
                   target="blank"
-                  href="mailto:williamhortone@gmail.com"
+                  href="https://youtu.be/a9ijKu06ILY?si=9a8uhOTSTGB3K4Iv"
                   className="flex gap-4 font-medium cursor-pointer hover:text-white "
                 >
                   <FaTiktok size={20} color="#E2E2E2" />

@@ -26,7 +26,7 @@ const HeroWrapper = () => {
                     </div>
                     <div className='flex gap-2'>
                         <a
-                        href='#contact' 
+                            href='#contact'
                             className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
                         >
                             <div className="flex items-center min-w-[150px] text-[12px] md:text-[15px] md:w-[200px]  justify-start app__button-content bg-basic">
@@ -40,7 +40,7 @@ const HeroWrapper = () => {
                         </a>
 
                         <a
-                        href='#services' 
+                            href='#services'
 
                             className="flex items-center gap-2 rounded-sm cursor-pointer app__button group"
                         >
@@ -56,7 +56,7 @@ const HeroWrapper = () => {
                     </div>
                 </div>
 
-                <div className=' hidden md:w-1/2 lg:flex items-center justify-center overfldow-hidden max-h-[30vh] h-auto md:max-h-[60vh]'>
+                <div className=' hidden md:w-1/2 lg:flex items-center justify-center  max-h-[30vh] h-auto md:max-h-[60vh]'>
                     <div className='w-[70%] h-[30vh] md:h-[40vh] z-20 rounded-lg'>
 
                         <Hero />
