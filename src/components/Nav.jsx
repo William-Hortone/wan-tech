@@ -3,7 +3,11 @@ import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { SiFacebook, SiTiktok, SiYoutube } from "react-icons/si";
 import images from "../constants/images";
+import { Link } from 'react-router-dom';
+// import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
 
+const MotionLink = motion(Link);
 
 export const Nav = () => {
     const [active, setActive] = useState(false);
@@ -40,17 +44,17 @@ export const Nav = () => {
                 </div>
                 <HamburgerButton active={active} setActive={setActive} />
             </div>
-            <AnimatePresence>{active && <LinksOverlay />}</AnimatePresence>
+            <AnimatePresence>{active && <LinksOverlay setActive={setActive} />}</AnimatePresence>
         </>
     );
 };
 
-const LinksOverlay = () => {
+const LinksOverlay = ({ setActive }) => {
     return (
         <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden">
             <Logo />
             <LinksContainer />
-            <FooterCTAs />
+            <FooterCTAs setActive={setActive} />
         </nav>
     );
 };
@@ -58,10 +62,10 @@ const LinksOverlay = () => {
 const LinksContainer = () => {
     return (
         <motion.div className="p-12 pl-4 space-y-4 md:pl-20">
-            {LINKS.map((l, idx) => {
+            {LINKS.map((link, idx) => {
                 return (
-                    <NavLink key={l.title} href={l.href} idx={idx}>
-                        {l.title}
+                    <NavLink key={idx} href={link.href} idx={idx}>
+                        {link.title}
                     </NavLink>
                 );
             })}
@@ -69,9 +73,30 @@ const LinksContainer = () => {
     );
 };
 
+// const NavLink = ({ children, href, idx }) => {
+//     return (
+//         <motion.Link
+//             initial={{ opacity: 0, y: -8 }}
+//             animate={{
+//                 opacity: 1,
+//                 y: 0,
+//                 transition: {
+//                     delay: 0.75 + idx * 0.125,
+//                     duration: 0.5,
+//                     ease: "easeInOut",
+//                 },
+//             }}
+//             exit={{ opacity: 0, y: -8 }}
+//             to={href}
+//             className="block text-5xl font-semibold transition-colors text-violet-400 hover:text-violet-50 md:text-7xl"
+//         >
+//             {children}.
+//         </motion.Link>
+//     );
+// };
 const NavLink = ({ children, href, idx }) => {
     return (
-        <motion.a
+        <MotionLink
             initial={{ opacity: 0, y: -8 }}
             animate={{
                 opacity: 1,
@@ -83,11 +108,11 @@ const NavLink = ({ children, href, idx }) => {
                 },
             }}
             exit={{ opacity: 0, y: -8 }}
-            href={href}
+            to={href}
             className="block text-5xl font-semibold transition-colors text-violet-400 hover:text-violet-50 md:text-7xl"
         >
             {children}.
-        </motion.a>
+        </MotionLink>
     );
 };
 
@@ -170,7 +195,7 @@ const HamburgerButton = ({ active, setActive }) => {
         </>
     );
 };
-const FooterCTAs = () => {
+const FooterCTAs = ({ setActive }) => {
     return (
         <>
             <div className="absolute flex gap-4 bottom-6 left-6 md:flex-col">
@@ -198,7 +223,7 @@ const FooterCTAs = () => {
             </div>
 
             <motion.a
-            href="#contact"
+                href="#contact"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{
                     opacity: 1,
@@ -210,6 +235,7 @@ const FooterCTAs = () => {
                     },
                 }}
                 exit={{ opacity: 0, y: 8 }}
+                onClick={() => setActive((pv) => !pv)}
                 className="absolute flex items-center gap-2 px-3 py-3 text-4xl uppercase transition-colors rounded-full bottom-2 right-2 bg-violet-700 text-violet-200 hover:bg-white hover:text-violet-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
             >
                 <span className="hidden md:block">contactez nous</span> <FiArrowRight />
@@ -238,12 +264,12 @@ const LINKS = [
 ];
 
 const SOCIAL_CTAS = [
-  
+
     {
         Component: SiFacebook,
         href: "https://www.facebook.com/profile.php?id=100066250815544",
     },
-      {
+    {
         Component: SiTiktok,
         href: "https://www.tiktok.com/@williamhortone?_t=ZS-8wxKoI4Yleq&_r=1",
     },
