@@ -30,7 +30,6 @@ const Avatar = () => {
   return (
     // Wrap Canvas with Suspense to handle asynchronous loading
     <Suspense fallback={<div>Loading...</div>}>
-      {" "}
       {/* Add fallback to display a loading indicator */}
       <Canvas
         style={{ height: "500px", width: "100%" }}

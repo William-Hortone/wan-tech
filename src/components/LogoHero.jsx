@@ -1,29 +1,5 @@
 import { motion } from "framer-motion";
-import {
-    SiNike,
-    Si3M,
-    SiAbstract,
-    SiAdobe,
-    SiAirtable,
-    SiAmazon,
-    SiBox,
-    SiBytedance,
-    SiChase,
-    SiCloudbees,
-    SiBurton,
-    SiBmw,
-    SiHeroku,
-    SiBuildkite,
-    SiCouchbase,
-    SiDailymotion,
-    SiDeliveroo,
-    SiEpicgames,
-    SiGenius,
-    SiGodaddy,
-} from "react-icons/si";
 import images from "../constants/images";
-// import images from "../constants/images";
-// import images from './../constants/images';
 
 const LogoHero = () => {
     return (
@@ -81,8 +57,6 @@ const LogoItem = ({ logo }) => {
         <div
             className="flex items-center justify-center w-16 h-16 text-black transition-colors md:w-24 md:h-24"
         >
-            {/* <Icon className="text-4xl md:text-5xl" /> */}
-
             <img src={logo} className="object-cover w-full h-full" alt="logo" />
         </div>
     );
