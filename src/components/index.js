@@ -1,49 +1,22 @@
-import ViewServices from "./ViewServices";
-import NavBar from "./NavBar";
-import TitleLogo from "./TitleLogo";
-import CircleAnimation from "./CircleAnimation";
-import Button from "./button/Button";
-import ServiceItem from "./ServiceItem";
-import Footer from "./Footer";
-import Title from "./Title";
 import Avatar from "./animations/Avatar";
-import Infos from "./Infos";
-import NavBtn from "./NavBtn";
-import PageTitle from "./PageTitle";
-import CardImg from "./CardImg";
 import PageTransition from "./animations/PageTransition";
-import SpeedText from "./customize/SpeedText";
+import Button from "./button/Button";
+import CardImg from "./CardImg";
+import CircleAnimation from "./CircleAnimation";
 import ViewParallax from "./customize/ViewParallax";
-import CarouselProjects from "./customize/CarouselProjects";
+import Footer from "./Footer";
 import { Hero } from "./Hero";
-import { Nav } from "./Nav";
 import HeroWrapper from "./HeroWrapper";
+import Infos from "./Infos";
 import LogoHero from "./LogoHero";
+import { Nav } from "./Nav";
 import OverviewServices from "./OverviewServices";
+import PageTitle from "./PageTitle";
+import Title from "./Title";
+import TitleLogo from "./TitleLogo";
 
 
 export {
-  ViewServices,
-  Button,
-  Footer,
-  ServiceItem,
-  NavBar,
-  TitleLogo,
-  Title,
-  CircleAnimation,
-  Avatar,
-  Infos,
-  NavBtn,
-  PageTitle,
-  CardImg,
-  PageTransition,
-  SpeedText,
-  ViewParallax,
-  CarouselProjects,
-  Hero,
-  Nav,
-  HeroWrapper,
-  LogoHero,
-  OverviewServices
-
+  Avatar, Button, CardImg, CircleAnimation, Footer, Hero, HeroWrapper, Infos, LogoHero, Nav, OverviewServices, PageTitle, PageTransition, Title, TitleLogo, ViewParallax
 };
+

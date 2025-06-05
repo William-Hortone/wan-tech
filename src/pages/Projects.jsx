@@ -3,12 +3,11 @@ import {
   Footer,
   Infos,
   Nav,
-  NavBar,
   PageTitle
 } from "../components";
 import { PortfolioOverview } from "../containers";
 
-const Projects = ({ showMenu, handleMenuToggle }) => {
+const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const Projects = ({ showMenu, handleMenuToggle }) => {
             <section className="pb-20 bg-slate-300">
               <Nav />
               <Infos />
-              <NavBar showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
 
               <div className="flex flex-col items-center justify-center w-full gap-4 my-[10rem]">
                 <PageTitle title="Portfolio" />

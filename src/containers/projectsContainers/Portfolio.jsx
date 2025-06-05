@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { CardImg } from "../../components";
 import images from "../../constants/images";
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 const Projects = () => {
   const scrollRef = useRef(null);
 
