@@ -26,7 +26,7 @@ const Projects = () => {
               <Nav />
               <Infos />
 
-              <div className="flex flex-col items-center justify-center w-full gap-4 my-[10rem]">
+              <div className="flex flex-col items-center justify-center w-full gap-4 my-[3rem] md:my-[10rem]">
                 <PageTitle title="Portfolio" />
               </div>
 

@@ -12,10 +12,10 @@ const Footer = () => {
   return (
     <>
       {/* Fixed Footer */}
-      <footer id="contact" className="flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic">
-        <div className="relative z-0 flex flex-col justify-between h-screen px-4 py-8 md:p-16">
-       
-          <h3 className="z-0 w-full md:w-1/2 font-fontAlt 2xl:text-2xl">
+      <footer id="contactFooter" className="flex flex-col justify-between w-full h-screen overflow-hidden bg-black text-basic">
+        <div className="relative flex flex-col justify-between h-screen px-4 py-8 md:p-16">
+
+          <h3 className="w-full md:w-1/2 font-fontAlt 2xl:text-2xl">
             Il n'y a qu'un pas à franchir entre votre idée et sa réalisation.
             Nous donnons vie à vos projets grâce à des solutions digitales sur
             mesure.
@@ -81,7 +81,7 @@ const Footer = () => {
 
             <div className="h-auto w-[100px] md:w-[250px]">
               <img
-                className="z-0 object-cover w-full h-full"
+                className="object-cover w-full h-full"
                 src={images.logo}
                 alt="logo"
                 loading="lazy"
