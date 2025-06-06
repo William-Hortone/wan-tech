@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import images from './../../constants/images';
+import { useState } from "react";
 
 const PortfolioOverview = () => {
     return (
@@ -44,23 +45,30 @@ const PortfolioOverview = () => {
 };
 
 const Card = ({ imgSrc, title, description, link }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleTap = () => {
+        setIsHovered(prev => !prev);
+    };
+
     return (
-        <motion.div whileHover="hover" className="w-full h-[300px] relative">
+        <motion.div
+            whileHover="hover"
+            onClick={handleTap}
+            className="w-full h-[300px] relative cursor-pointer md:cursor-default"
+        >
             <div className="flex flex-col justify-center p-6 bg-black h-1/2">
                 <h3 className="mb-2 text-xl font-semibold text-white uppercase">{title}</h3>
                 {/* <p className="text-sm font-light text-slate-300">{description}</p> */}
             </div>
+
             <motion.div
-                initial={{
-                    top: "0%",
-                    right: "0%",
-                }}
+                initial={{ top: "0%", right: "0%" }}
+                animate={isHovered ? { top: "50%", right: "50%" } : { top: "0%", right: "0%" }}
                 variants={{
-                    hover: {
-                        top: "50%",
-                        right: "50%",
-                    },
+                    hover: { top: "50%", right: "50%" },
                 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
                 className="absolute inset-0 z-10 bg-slate-200"
                 style={{
                     backgroundImage: `url(${imgSrc})`,
@@ -68,6 +76,7 @@ const Card = ({ imgSrc, title, description, link }) => {
                     backgroundPosition: "center",
                 }}
             />
+
             <a
                 href={link}
                 target="blank"

@@ -24,10 +24,12 @@
   scroll-behavior: smooth;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
 }
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth; 
+
 }
 a {
   color: unset;

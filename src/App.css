@@ -1,5 +1,8 @@
 
 /* Text animation on scroll */
+html {
+  scroll-behavior: smooth; 
+}
 .app__desc-content {
   color: black;
 }
