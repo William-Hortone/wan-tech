@@ -72,7 +72,6 @@ a {
 
 .cardImg{
   transition: all .3s ease ;
-  /* transform: scale(0.8); */
 }
 .wrapperCardImg:hover .cardImg{
   transition: all .3s ease ;
