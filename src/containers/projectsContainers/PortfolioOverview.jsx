@@ -31,7 +31,6 @@ const PortfolioOverview = () => {
                     imgSrc={images.project4}
                     link="https://fdp-app-client.vercel.app"
                 />
-
                 <Card
                     title="Ona Batiment"
                     description="This one's real blocky"
@@ -59,7 +58,6 @@ const Card = ({ imgSrc, title, description, link }) => {
         >
             <div className="flex flex-col justify-center p-6 bg-black h-1/2">
                 <h3 className="mb-2 text-xl font-semibold text-white uppercase">{title}</h3>
-                {/* <p className="text-sm font-light text-slate-300">{description}</p> */}
             </div>
 
             <motion.div
