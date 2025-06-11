@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import images from "../constants/images";
-import video from "../assets/video1.mp4";
+import {servicesItems} from '../constants/data.js'
 
 const OverviewServices = () => {
     const targetRef = useRef(null);
@@ -13,8 +12,8 @@ const OverviewServices = () => {
             ref={targetRef}
             className="flex flex-col text-white bg-black lg:flex-row"
         >
-            <Content content={items} />
-            <Images content={items} scrollYProgress={scrollYProgress} />
+            <Content content={servicesItems} />
+            <Images content={servicesItems} scrollYProgress={scrollYProgress} />
         </section>
     );
 };
@@ -73,29 +72,4 @@ const Images = ({ content, scrollYProgress }) => {
 
 export default OverviewServices;
 
-const items = [
-    {
-        id: 1,
-        title: "SITES WEB",
-        description: "Nous concevons des sites web sur mesure qui reflètent l'identité de votre marque et répondent à vos objectifs commerciaux. Que vous ayez besoin d'un site vitrine, d'une plateforme e-commerce ou d'un blog,",
-        img: images.webSite
-    },
-    {
-        id: 2,
-        title: "APPLICATIONS MOBILE",
-        description: "Nous concevons des applications mobiles innovantes, parfaitement adaptées aux besoins uniques de votre entreprise et de vos utilisateurs. Nous créons des applications intuitives, performantes et visuellement attrayantes, qu'elles soient destinées à iOS, Android ou aux deux",
-        img: images.mobileApp,
-    },
-    {
-        id: 3,
-        title: "LOGO ET AFFICHES",
-        description: "Votre image de marque commence par un logo percutant et des affiches attrayantes. Nous travaillons en étroite collaboration avec vous pour comprendre vos valeurs et votre vision, afin de créer des éléments graphiques qui captivent votre audience.",
-        img: images.logoIntro,
-    },
-    {
-        id: 4,
-        title: "Video Marketing",
-        description: "Nous donnons vie à votre message grâce à des vidéos captivantes et stratégiquement pensées. Qu’il s’agisse de présentations de produits, de contenus pour les réseaux sociaux ou de publicités percutantes, nous créons des vidéos qui retiennent l’attention, engagent votre audience et renforcent votre image de marque",
-        video: video
-    },
-];
+
