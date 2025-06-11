@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { logoData } from "../constants/data";
 import images from "../constants/images";
 
 const LogoHero = () => {
@@ -64,30 +65,17 @@ const LogoItem = ({ logo }) => {
 
 const LogoItemsTop = () => (
     <>
-        <LogoItem logo={images.logo2} />
-        <LogoItem logo={images.logo3} />
-        <LogoItem logo={images.logo1} />
-        <LogoItem logo={images.logo8} />
-        <LogoItem logo={images.logo6} />
-        <LogoItem logo={images.logo5} />
-        <LogoItem logo={images.logo7} />
-        <LogoItem logo={images.logo9} />
-        <LogoItem logo={images.logo10} />
-
+        {logoData.map((logo, index) => (
+            <LogoItem key={index} logo={logo.logo} />
+        ))}
     </>
 );
 
 const LogoItemsBottom = () => (
     <>
-        <LogoItem logo={images.logo2} />
-        <LogoItem logo={images.logo3} />
-        <LogoItem logo={images.logo1} />
-        <LogoItem logo={images.logo8} />
-        <LogoItem logo={images.logo6} />
-        <LogoItem logo={images.logo5} />
-        <LogoItem logo={images.logo7} />
-        <LogoItem logo={images.logo9} />
-        <LogoItem logo={images.logo10} />
+        {logoData.map((logo, index) => (
+            <LogoItem key={index} logo={logo.logo} />
+        ))}
 
     </>
 );
