@@ -28,7 +28,7 @@ const Content = ({ content }) => {
                         }`}
                 >
                     <h3 className="text-2xl font-bold uppercase sm:text-3xl md:text-5xl">{title}</h3>
-                    <p className="max-w-xl text-sm font-light md:lg:text-3xl sm:text-base">{description}</p>
+                    <p className="max-w-xl text-lg font-light md:lg:text-3xl sm:text-base">{description}</p>
                 </div>
             ))}
         </div>

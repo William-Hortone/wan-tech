@@ -11,14 +11,12 @@ const Home = () => {
         displaySocials={true}
         displayItemNumbering={true}
         menuButtonColor="#fffff"
-
         openMenuButtonColor="#fff"
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
         accentColor="#ff6b6b"
-
       />
-      <section className="z-10 h-auto bg-black pageContainer">
+      <section className="z-10 h-auto overflow-x-hidden bg-black pageContainer">
         <section className="bg-black pageWrapper">
           <HeroWrapper />
           <Description />
