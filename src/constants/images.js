@@ -29,6 +29,7 @@ import logo7 from "../assets/logo6.png";
 import logo8 from "../assets/logo7.png";
 import logo9 from "../assets/logo8.png";
 import logo10 from "../assets/logo9.png";
+import limba from "../assets/limba.png";
 
 const images = {
   seeMore,
@@ -61,7 +62,8 @@ const images = {
   logo7,
   logo8,
   logo9,
-  logo10
+  logo10,
+  limba
 };
 
 export default images;

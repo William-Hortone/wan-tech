@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Footer, Infos, Nav } from "../components";
 import { Introduction } from "../containers";
+import Navbar from "../components/Navbar";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +19,20 @@ const About = () => {
       <section className="h-auto min-h-[100vh] z-10 overflow-x-hidden bg-black pageContainer">
         <section className="pageWrapper">
           <section className="bg-slate-300">
-            <Nav />
+            {/* <Nav /> */}
+
+            <Navbar
+              position="right"
+              textColor="white"
+              displaySocials={true}
+              displayItemNumbering={true}
+              menuButtonColor="#000000"
+              openMenuButtonColor="#fff"
+              changeMenuColorOnOpen={true}
+              colors={['#B19EEF', '#5227FF']}
+              accentColor="#ff6b6b"
+
+            />
             <Infos />
             {isVisible && (
               <Introduction />

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import {servicesItems} from '../constants/data.js'
+import { servicesItems } from '../constants/data.js'
 
 const OverviewServices = () => {
     const targetRef = useRef(null);
@@ -27,8 +27,8 @@ const Content = ({ content }) => {
                     className={`p-6 sm:p-8 h-[100vh] flex flex-col justify-between ${idx % 2 ? "bg-white text-black" : "bg-black text-white"
                         }`}
                 >
-                    <h3 className="text-2xl font-bold uppercase sm:text-3xl">{title}</h3>
-                    <p className="max-w-xl text-sm font-light sm:text-base">{description}</p>
+                    <h3 className="text-2xl font-bold uppercase sm:text-3xl md:text-5xl">{title}</h3>
+                    <p className="max-w-xl text-sm font-light md:lg:text-3xl sm:text-base">{description}</p>
                 </div>
             ))}
         </div>
