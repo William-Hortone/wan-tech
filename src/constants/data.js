@@ -102,7 +102,7 @@ const allProjects = [
   {
     title: "General TTK",
     description: "",
-    link: "https://curious-melba-81e493.netlify.app",
+    link: "https://gttk.netlify.app/",
     imgSrc: images.project6,
   },
   {
@@ -116,6 +116,12 @@ const allProjects = [
     description: "",
     link: "https://onabatiment.com",
     imgSrc: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+  },
+  {
+    title: "Smart Electric Meter",
+    description: "",
+    link: "",
+    imgSrc: images.limba,
   }
 ];
 // Services items
@@ -146,8 +152,7 @@ const servicesItems = [
   },
 ];
 //  Logo data 
-
-const logoData =[
+const logoData = [
   {
     title: "",
     logo: images.logo2,
@@ -156,10 +161,10 @@ const logoData =[
     title: "",
     logo: images.logo3,
   },
-  {
-    title: "",
-    logo: images.logo1,
-  },
+  // {
+  //   title: "",
+  //   logo: images.logo1,
+  // },
   {
     title: "",
     logo: images.logo8,
@@ -185,6 +190,7 @@ const logoData =[
     logo: images.logo10,
   },
 ]
+
 
 
 export { products, servicesItems, allProjects, logoData };
