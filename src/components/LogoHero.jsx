@@ -1,15 +1,5 @@
 import { motion } from "framer-motion";
 import { logoData } from "../constants/data";
-import images from "../constants/images";
-import {
-    SiAccenture,
-    SiAdobe,
-    SiCoinbase,
-    SiFacebook,
-    SiPatreon,
-    SiReddit,
-    SiYoutube,
-} from "react-icons/si";
 import React, { useEffect, useState } from "react";
 
 const LogoHero = () => {
@@ -25,77 +15,9 @@ const LogoHero = () => {
             </div>
 
             <CircleLogo />
-            {/* 
-            <div className="flex overflow-hidden">
-                <TranslateWrapper>
-                    <LogoItemsTop />
-                </TranslateWrapper>
-                <TranslateWrapper>
-                    <LogoItemsTop />
-                </TranslateWrapper>
-                <TranslateWrapper>
-                    <LogoItemsTop />
-                </TranslateWrapper>
-            </div>
-            <div className="flex mt-4 overflow-hidden">
-                <TranslateWrapper reverse>
-                    <LogoItemsBottom />
-                </TranslateWrapper>
-                <TranslateWrapper reverse>
-                    <LogoItemsBottom />
-                </TranslateWrapper>
-                <TranslateWrapper reverse>
-                    <LogoItemsBottom />
-                </TranslateWrapper>
-            </div> */}
         </section>
     );
 };
-
-const TranslateWrapper = ({ children, reverse }) => {
-    return (
-        <motion.div
-            initial={{ translateX: reverse ? "-100%" : "0%" }}
-            animate={{ translateX: reverse ? "0%" : "-100%" }}
-            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="flex gap-4 px-2"
-        >
-            {children}
-        </motion.div>
-    );
-};
-
-const LogoItem = ({ logo }) => {
-    return (
-        <div
-            className="flex items-center justify-center w-16 h-16 text-black transition-colors md:w-24 md:h-24"
-        >
-            <img src={logo} className="object-cover w-full h-full" alt="logo" />
-        </div>
-    );
-};
-
-const LogoItemsTop = () => (
-    <>
-        {logoData.map((logo, index) => (
-            <LogoItem key={index} logo={logo.logo} />
-        ))}
-    </>
-);
-
-const LogoItemsBottom = () => (
-    <>
-        {logoData.map((logo, index) => (
-            <LogoItem key={index} logo={logo.logo} />
-        ))}
-
-    </>
-);
-
-
-
-
-// import { motion } from "framer-motion";
 
 const CircleLogo = () => {
     return (
@@ -200,12 +122,6 @@ const SpinningLogos = () => {
                             transition={TRANSITION}
                             className={`absolute  place-content-center rounded-full shadow-lg `}
                         >
-                            {/* <icon.logo
-                                style={{
-                                    fontSize: sizes.logoFontSize,
-                                }}
-                            /> */}
-
                             <img src={item.logo} alt="logo" className="rounded-full" />
                         </motion.div>
                     );
@@ -214,8 +130,6 @@ const SpinningLogos = () => {
         </div>
     );
 };
-
-// export default Example;
 
 const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
@@ -243,37 +157,6 @@ const useWindowSize = () => {
 const degreesToRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 };
-
-// const w = [
-//     {
-//         Icon: SiFacebook,
-//         className: "bg-[#0766FF] text-white",
-//     },
-//     {
-//         Icon: SiYoutube,
-//         className: "bg-[#FF0200] text-white",
-//     },
-//     {
-//         Icon: SiAccenture,
-//         className: "bg-[#A101FF] text-white",
-//     },
-//     {
-//         Icon: SiAdobe,
-//         className: "bg-[#CE0E03] text-white",
-//     },
-//     {
-//         Icon: SiReddit,
-//         className: "bg-[#FF4500] text-white",
-//     },
-//     {
-//         Icon: SiCoinbase,
-//         className: "bg-[#0052FF] text-white",
-//     },
-//     {
-//         Icon: SiPatreon,
-//         className: "bg-[#F96C59] text-white",
-//     },
-// ];
 
 // Defines the distance from the center of the circle to the center
 // of the icons
