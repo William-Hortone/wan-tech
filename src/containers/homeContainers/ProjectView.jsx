@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectView = () => {
   return (
-    <section className="z-20 w-full h-auto pb-8 bg-black">
+    <section className="z-20 w-full max-w-full overflow-x-hidden h-auto pb-8 bg-black">
       <ViewParallax />
     </section>
   );

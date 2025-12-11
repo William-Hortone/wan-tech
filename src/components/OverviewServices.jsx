@@ -10,7 +10,7 @@ const OverviewServices = () => {
         <section
             id="services"
             ref={targetRef}
-            className="flex flex-col text-white bg-black lg:flex-row"
+            className="flex flex-col text-white bg-black lg:flex-row overflow-x-hidden max-w-full w-full"
         >
             <Content content={servicesItems} />
             <Images content={servicesItems} scrollYProgress={scrollYProgress} />
@@ -20,7 +20,7 @@ const OverviewServices = () => {
 
 const Content = ({ content }) => {
     return (
-        <div className="w-full lg:w-1/2">
+        <div className="w-full max-w-full lg:w-1/2 overflow-x-hidden">
             {content.map(({ id, title, description }, idx) => (
                 <div
                     key={id}
@@ -43,7 +43,7 @@ const Images = ({ content, scrollYProgress }) => {
     );
 
     return (
-        <div className="sticky top-0 w-full h-screen overflow-hidden lg:w-1/2">
+        <div className="sticky top-0 w-full max-w-full h-screen overflow-hidden lg:w-1/2">
             <motion.div style={{ top }} className="absolute left-0 right-0">
                 {[...content].reverse().map(({ img, video, id, title }) => (
                     <div key={id} className="w-full h-screen">

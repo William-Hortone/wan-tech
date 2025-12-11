@@ -24,12 +24,20 @@
   scroll-behavior: smooth;
 }
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  max-width: 100% !important;
+  width: 100%;
+}
+#root {
   overflow-x: hidden;
-  scroll-behavior: smooth; 
-
+  max-width: 100%;
+  width: 100%;
 }
 a {
   color: unset;

@@ -2,8 +2,8 @@ import React from "react";
 
 const Infos = () => {
   return (
-    <div className="relative flex items-center w-full py-0 bg--600">
-      <div className="flex items-center overflow-hidden">
+    <div className="relative flex items-center w-full max-w-full py-0 overflow-hidden bg--600">
+      <div className="flex items-center overflow-hidden max-w-full">
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex text-white animate-sliding-move">
             <span className="flex items-center text-[7vw] font-fontBase whitespace-nowrap uppercase">
