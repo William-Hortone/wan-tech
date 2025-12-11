@@ -28,7 +28,7 @@ const Description = () => {
   }, []);
 
   return (
-    <section className="w-full h-screen flex flex-col justify-center items-center gap-32 md:px-[20%] bg-primary">
+    <section className="w-full max-w-full overflow-x-hidden h-screen flex flex-col justify-center items-center gap-32 md:px-[20%] bg-primary">
       <div className="app__desc-content">
         <h3 className="leading-10 text-center uppercase content-text font-fontAlt 2xl:text-3xl md:text-xl bg-primary">
           <span>Il n'y a qu'un pas à franchir entre votre idée et</span>

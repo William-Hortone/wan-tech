@@ -3,7 +3,7 @@ import Infos from './Infos'
 
 const HeroWrapper = () => {
     return (
-        <section className="relative w-full flex flex-col justify-between h-screen overflow-hidden bg-[#0f172a]">
+        <section className="relative w-full max-w-full flex flex-col justify-between h-screen overflow-x-hidden bg-[#0f172a]">
             {/* <Nav /> */}
             <div className='flex flex-col-reverse items-center justify-center w-full h-full lg:justify-between lg:flex-row ' >
                 <div className='flex flex-col items-center justify-center w-full h-full gap-4 md:pl-12 md:pr-2 lg:items-start'   >

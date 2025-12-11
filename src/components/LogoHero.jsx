@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 
 const LogoHero = () => {
     return (
-        <section className="pb-12 bg-white min-h-[100svh] flex flex-col justify-center">
-            <div className="flex flex-col items-center w-full px-8 py-12 md:py-20">
+        <section className="pb-12 bg-white min-h-[100svh] flex flex-col justify-center overflow-x-hidden max-w-full w-full">
+            <div className="flex flex-col items-center w-full max-w-full px-8 py-12 md:py-20">
                 <h1 className="max-w-xl text-4xl font-semibold text-center md:text-6xl">
                     Un logo à votre image, fidèle à votre vision.
                 </h1>
@@ -21,7 +21,7 @@ const LogoHero = () => {
 
 const CircleLogo = () => {
     return (
-        <div className="grid px-4 py-12 overflow-hidden bg-white place-content-center">
+        <div className="grid px-4 py-12 overflow-hidden bg-white place-content-center max-w-full w-full">
             <SpinningLogos />
         </div>
     );
